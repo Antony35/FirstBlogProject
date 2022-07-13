@@ -1,9 +1,187 @@
-h1
+/* General style of the page */
+body
 {
-    color: red;
+    background-color: rgba(232, 179, 135, 0.3);
+    margin: auto;
+    color: rgb(25, 22, 17);
 }
 
 p
 {
-    color: blue;
+    font-size: 1.2em;
+}
+/* MainImg */
+#mainImg
+{
+    background: url(img/OriginalPaysage.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 785px;
+}
+
+/* navigation menu */
+nav
+{
+    text-transform: uppercase; 
+    font-size: 1.6em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav ul, ul > a
+{
+    color: white;
+    font-weight: 200;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: underline;
+    text-underline-position: 3px;
+    text-decoration-color: brown;
+    text-underline-offset: 2px;
+}
+
+.leftShapeArrowDown 
+{
+    display: inline-block;
+    margin-left: 12px;
+    height: 18px;
+    width: 2px;
+    transform: rotate(-45deg);
+    background-color: brown;
+}
+
+.rightShapeArrowDown
+{
+    display: inline-block;
+    margin-left: 10px;
+    height: 18px;
+    width: 2px;
+    transform: rotate(45deg);
+    background-color: brown;
+
+}
+#menuNav1
+{
+    padding-left: 0%;
+    padding-top: 2.5%;
+    max-width: 50%;
+    gap: 80px;
+    margin-left: 3%;
+}
+
+#menuNav2
+{
+    padding-left: 0%;
+    max-width: 50%;
+    gap: 80px;
+    margin-right: 3%;
+    padding-top: 2.5%;
+
+}
+
+#logo
+{
+    max-height: 120px;
+    margin-top: 1%;
+    
+}
+
+#arrowUp
+{
+    opacity: 0.6;
+    max-width: 50px;
+}
+
+#scrollUp
+{
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+    
+}
+
+/* SecondBlock our presentation */
+#introduction
+{
+    margin-top: 5%;
+    display: flex;
+    height: 160px;
+}
+
+#imgUs
+{
+    margin-left: 20%;
+    margin-top: 5%;
+    border: 1px solid;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+#presentation
+{
+    text-align: justify;
+    padding-right: 10%;
+}
+
+/* benner with our 2 last article */
+#banner
+{
+    background-image: url('img/originalEarth.png');
+    margin-top: 5%;
+    border: 1px solid black;
+    height: 200px;
+}
+
+#bannerDescription
+{
+    display: flex;
+}
+
+.description
+{
+    border: 2px solid black;
+    position: relative;
+    min-width: 90%;
+    top: 156px;
+    color: brown;
+    background-color: black;
+}
+
+.bouton
+{
+    text-decoration: none;
+    color: brown;
+    background-color: black;
+    font-size: 1.2em;
+    border: 2px solid black;
+    position: relative;
+    top: 175px;
+    min-width: 9.5%;
+    max-height: 22px;
+
+}
+
+/* La map */
+#ourMap
+{
+    margin-top: 5%;
+    background-color: brown;
+    text-align: center;
+    border: 1px solid black;
+    height: 200px;
+}
+
+#map
+{
+    margin-top: 100px;
+}
+
+footer
+{
+    display: flex;
+    margin-top: 5%;
+    border: 1px solid black;
+    height: 200px;
 }

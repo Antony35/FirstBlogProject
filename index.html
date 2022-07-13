@@ -9,44 +9,52 @@
 </head>
 <body>
     <header>
-        <div id = "ImgWorld">
-            <!--Insertion d'un demi-monde qui tourne sur lequel un van roule-->
+        <div id="mainImg">
+            <nav>
+                <ul id="menuNav1">
+                    <a href="index.html"><li>Accueil</li></a>
+                    <li>Préparation<span class="leftShapeArrowDown"></span><span class="rightShapeArrowDown"></span></li>
+                    <li>Destination<span class="leftShapeArrowDown"></span><span class="rightShapeArrowDown"></span></li>
+                </ul>
+                <img id="logo" src="img/logo.png" alt="logo">
+                <ul id="menuNav2">
+                    <li>VanLife<span class="leftShapeArrowDown"></span><span class="rightShapeArrowDown"></span></li>
+                    <li>A propos</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
         </div>
-        <div id = "logo">
-            <!--Insertion de notre logo-->
+        <div id="scrollUp" >
+            <a href="#top" title="Haut de page"><img id="arrowUp" src="Img/topArrow.png"/></a>
         </div>
-        <nav>
-            <ul>
-                <li>Accueil</li>
-                <li>Préparation</li>
-                <li>Destination</li>
-                <li>VanLife</li>
-                <li>A propos</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
     </header>
-    <section class = introduction>
-        <article>
-            <p>Une courte présentation sur nous</p>
-        </article>
+    <section id="introduction">
         <aside>
-            <img src="NULL.png" alt="Antony et Apolline">
+            <img id = "imgUs" src="Img/Us.jpg" alt="Antony et Apolline">
         </aside>
+        <article id = "presentation">
+            <p> Salut, nous sommes Apolline et Antony. Deux amoureux du voyage et de la nature. 
+                On s'est lancé dans la folle aventure de parcourir le monde. Vous trouverez dans 
+                notre blog tous nos conseil et astuce afin de prépare votre voyage au mieux.</p>
+            <p><a href="aboutUs.html">En savoir plus sur nous</a></p>
+        </article>
     </section>
-    <div id = "banner">
-        <!--Insertion d'une baniere en 2 pages sur nos deux dernier article -->
+    <div id="banner">
+        <div id = "bannerDescription">
+            <p class = "description">Retour sur notre derniere article</p>
+            <a class = "bouton" href="derniereArticle.html">Voir l'article</a>
+        </div>   
     </div>
-    <div id = OurMap>
-        <!--Insertion d'une carte iteractive des pays visité avec lien sur la page concernant le pays-->
+    <div id="ourMap">
+        <p id = map>Notre map interactive et en cour de création merci de patienter</p>
     </div>
     <footer>
-        <div id = AlbumPhoto>
+        <div id="albumPhoto">
         </div>
-        <div id = TellUs>
+        <div id ="tellUs">
             <a href="">Votre avis nous intéresse</a>
         </div>
-        <div id = droit>
+        <div id ="low">
             <p>Tous droits réservés.</p>
         </div> 
     </footer>
