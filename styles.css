@@ -2,7 +2,6 @@
 body
 {
     background-color: rgba(232, 179, 135, 0.3);
-    margin: auto;
     color: rgb(25, 22, 17);
 }
 
@@ -19,78 +18,149 @@ p
     height: 785px;
 }
 
-/* navigation menu */
-nav
-{
-    text-transform: uppercase; 
-    font-size: 1.6em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-nav ul, ul > a
-{
-    color: white;
-    font-weight: 200;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    text-decoration: underline;
-    text-underline-position: 3px;
-    text-decoration-color: brown;
-    text-underline-offset: 2px;
-}
-
-.leftShapeArrowDown 
-{
-    display: inline-block;
-    margin-left: 12px;
-    height: 18px;
-    width: 2px;
-    transform: rotate(-45deg);
-    background-color: brown;
-}
-
-.rightShapeArrowDown
-{
-    display: inline-block;
-    margin-left: 10px;
-    height: 18px;
-    width: 2px;
-    transform: rotate(45deg);
-    background-color: brown;
-
-}
-#menuNav1
-{
-    padding-left: 0%;
-    padding-top: 2.5%;
-    max-width: 50%;
-    gap: 80px;
-    margin-left: 3%;
-}
-
-#menuNav2
-{
-    padding-left: 0%;
-    max-width: 50%;
-    gap: 80px;
-    margin-right: 3%;
-    padding-top: 2.5%;
-
-}
-
+/* navigation menu part one creation of the static menu */
 #logo
 {
-    max-height: 120px;
-    margin-top: 1%;
-    
+    height: 130px;
+    margin-top: -20%;
 }
 
+:root
+{
+    --hauteur-menu: 140px;
+}
+
+*
+{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav
+{    
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0%;
+    text-transform: uppercase; 
+    font-size: 1.6em;
+}
+
+nav > ul
+{
+    height: var(--hauteur-menu);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav > ul > li
+{
+        position: relative;
+}
+
+nav > ul > li > a
+{
+    position: relative;
+    top: 25%;
+}
+
+li a
+
+{
+    text-decoration: none;
+    color: white;
+}
+/* The Arrow */
+
+ .dropDownMenu > a::after
+{
+    content: '>';
+    font-size: small;
+    padding-left: 5px;
+    vertical-align:25%;
+    display: inline-block;
+}
+
+@keyframes rotateArrow 
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(90deg);
+    }   
+}
+
+.dropDownMenu:hover > a::after
+{
+    animation: rotateArrow 0.1s forwards;
+}
+
+
+/* Part two cration of th under menu */
+.underMenu
+{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: left;
+    background-color: rgba(162, 188, 184, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.underMenu > li > a
+{
+    display: flex; 
+    padding-left: 5%;
+    font-size: 0.8em;
+    text-transform: lowercase;
+}
+
+/* Part three animation on the menu  */
+
+nav > ul > li:hover > a
+{
+    color:  rgba(54, 75, 93, 1);
+}
+
+.underMenu > li:hover > a 
+{
+    color:   rgba(54, 75, 93, 1);
+}
+
+
+@keyframes underMenuAppear 
+{
+    0%
+    {
+        border-top: rgba(162, 188, 184, 0.5);
+    }
+    100%
+    {
+        max-height: 100%;
+    }
+}
+
+.dropDownMenu:hover > .underMenu
+{
+    animation: underMenuAppear 1s forwards;
+}
+
+/* Arrow to go back on top of the page */
 #arrowUp
 {
-    opacity: 0.6;
+    opacity: 0.6; 
     max-width: 50px;
 }
 
@@ -103,26 +173,15 @@ nav ul, ul > a
 }
 
 /* SecondBlock our presentation */
-#introduction
-{
-    margin-top: 5%;
-    display: flex;
-    height: 160px;
-}
 
-#imgUs
+article
 {
-    margin-left: 20%;
-    margin-top: 5%;
-    border: 1px solid;
-    border-radius: 10px;
-    max-width: 70%;
-}
+    border: 2px solid green;
 
-#presentation
-{
-    text-align: justify;
-    padding-right: 10%;
+    margin-top: 3%;
+    width: 80%;
+    justify-content: center;
+    text-align: center;
 }
 
 /* benner with our 2 last article */

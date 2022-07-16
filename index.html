@@ -11,16 +11,34 @@
     <header>
         <div id="mainImg">
             <nav>
-                <ul id="menuNav1">
-                    <a href="index.html"><li>Accueil</li></a>
-                    <li>Préparation<span class="leftShapeArrowDown"></span><span class="rightShapeArrowDown"></span></li>
-                    <li>Destination<span class="leftShapeArrowDown"></span><span class="rightShapeArrowDown"></span></li>
-                </ul>
-                <img id="logo" src="img/logo.png" alt="logo">
-                <ul id="menuNav2">
-                    <li>VanLife<span class="leftShapeArrowDown"></span><span class="rightShapeArrowDown"></span></li>
-                    <li>A propos</li>
-                    <li>Contact</li>
+                <ul>
+                    <li><a href="index.html"><img id="logo" src="img/logo.png" alt="logo"></a></li>
+                    <li class="dropDownMenu">
+                        <a href="#">Préparation</a>
+                        <ul class="underMenu">
+                            <li><a href="">Sac a dos</a></li>
+                            <li><a href="">Visa</a></li>
+                            <li><a href="">Autre</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropDownMenu">
+                        <a href="#">Destination</a>
+                        <ul class="underMenu">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropDownMenu">
+                        <a href="#">Vanlife</a>
+                        <ul class="underMenu">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,15 +46,17 @@
             <a href="#top" title="Haut de page"><img id="arrowUp" src="Img/topArrow.png"/></a>
         </div>
     </header>
-    <section id="introduction">
-        <aside>
-            <img id = "imgUs" src="Img/Us.jpg" alt="Antony et Apolline">
-        </aside>
-        <article id = "presentation">
-            <p> Salut, nous sommes Apolline et Antony. Deux amoureux du voyage et de la nature. 
-                On s'est lancé dans la folle aventure de parcourir le monde. Vous trouverez dans 
-                notre blog tous nos conseil et astuce afin de prépare votre voyage au mieux.</p>
-            <p><a href="aboutUs.html">En savoir plus sur nous</a></p>
+    <h1>Quelque mots sur nous</h1>
+    <section>
+        <article>
+            <img id = "imgUs" src="Img/Us.jpg" alt="Us">
+            <p>
+                Hello ! Nous sommes Apolline et Antony, deux baroudeurs amoureux de la nature. On s’est lancés dans la folle aventure de parcourir le monde !
+                Ainsi, nous te partageons dans ce blog, nos expériences de voyage, nos conseils et notre passion pour la vie en van aménagé.
+            </p>
+            <p>
+                <a href="#">En savoir plus sur nous</a>
+            </p>
         </article>
     </section>
     <div id="banner">
