@@ -1,5 +1,5 @@
 /* General style of the page */
-body
+#mainWrapper    
 {
     background-color: rgba(232, 179, 135, 0.3);
     color: rgb(25, 22, 17);
@@ -174,14 +174,50 @@ nav > ul > li:hover > a
 
 /* SecondBlock our presentation */
 
+section
+{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(34, 48, 63);
+    color: white;
+}
+
 article
 {
-    border: 2px solid green;
 
     margin-top: 3%;
     width: 80%;
-    justify-content: center;
+    display: flex;
+    align-items: center;
     text-align: center;
+    border-radius: 10px;
+    padding-bottom: 3%;
+}
+
+#introduction > p > a
+{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: white;
+}
+
+#introduction > p > a:hover
+{
+    font-size: 1.6em;
+}
+
+#imgUs
+{
+    max-width: 35%;
+    max-height: 65%;
+    border-radius: 10px;
+}
+
+#introduction > p
+{
+    margin-left: 100px;
+    padding: 10px;
 }
 
 /* benner with our 2 last article */
