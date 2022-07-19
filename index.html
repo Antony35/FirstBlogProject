@@ -8,12 +8,11 @@
     <title>Page d'accueil - Somewhere in the world</title>
 </head>
 <body>
-    <div id="mainWrapper">
     <header>
-        <div id="mainImg">
+        <div id="header__mainImg">
             <nav>
                 <ul>
-                    <li><a href="index.html"><img id="logo" src="img/logo.png" alt="logo"></a></li>
+                    <li><a href="index.html"><img id="nav__logo" src="img/logo.png" alt="logo"></a></li>
                     <li class="dropDownMenu">
                         <a href="#">Préparation</a>
                         <ul class="underMenu">
@@ -43,12 +42,9 @@
                 </ul>
             </nav>
         </div>
-        <div id="scrollUp" >
-            <a href="#top" title="Haut de page"><img id="arrowUp" src="Img/topArrow.png"/></a>
-        </div>
     </header>
-    <section>
-        <article>
+    <section id="ourPresentation">
+        <article id="presentation">
                 <img id = "imgUs" src="Img/Us.jpg" alt="Us">
                 <div id="introduction">
             <p>
@@ -62,26 +58,61 @@
             </p>
         </div>
         </article>
-    </section>    
-    <div id="banner">
-        <div id = "bannerDescription">
-            <p class = "description">Retour sur notre derniere article</p>
-            <a class = "bouton" href="derniereArticle.html">Voir l'article</a>
-        </div>   
+    </section>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div id="slide1" class="slide">
+                    <img class="slideImg" src="Img/last1.PNG" alt="last Article1">
+                    <span class="seeArticle"><a href="#">Voir l'article</a></span>
+                    <a id="try" class="slidePrev" href="#slide2" title="Prev"></a>
+                    <a class="slideNext" href="#slide2" title="Next"></a>
+                </div>
+                <div id="slide2" class="slide">
+                    <img class="slideImg" src="Img/last2.PNG" alt="last Article2">
+                    <span class="seeArticle"><a href="#">Voir l'article</a></span>
+                    <a class="slideNext" href="#slide1" title="Next"></a>
+                    <a class="slidePrev" href="#slide1" title="Prev"></a>
+                </div>                
+            </div>
+            <div class="sliderNav">
+                <a class="sliderNavlink" href="#slide1"></a>
+                <a class="sliderNavlink" href="#slide2"></a>
+            </div>
+        </div>
     </div>
-    <div id="ourMap">
-        <p id = map>Notre map interactive et en cour de création merci de patienter</p>
+    </section>
+    <div id="map">
+        <h1>Notre tour du monde</h1>
+        <p>Ils sont peux nombreux pour le moment mais voici la carte de nos pays parcouru</p>
+        <img class="worldMap" src="img/wolrdMap.png" alt="World Map">
     </div>
     <footer>
-        <div id="albumPhoto">
+        <div id="footer__tellUs">
+            <p>Donne nous ton avis</p>
+            <p><a href="#">Nous contacter</a></p> 
         </div>
-        <div id ="tellUs">
-            <a href="">Votre avis nous intéresse</a>
+        <span class="footer__ligne"></span>
+        <div id="footer__remenber">
+            <p>Nos Souvenirs</p>
+            <div class="remenber__albums">
+                <div class="albums__album">      
+                    <p>Australie</p> 
+                    <p><a href="#"><img src="Img/OriginalBeach.jpg" alt="Album Australie"></a></p>
+                </div>
+                <div class="albums__album">
+                    <p>Nouvelle Zélande</p>
+                    <p><a href="#"><img src="Img/OriginalPaysage.jpg" alt="Album Nouvelle Zélande"></a></p>
+                </div>    
+            </div>
         </div>
-        <div id ="low">
-            <p>Tous droits réservés.</p>
-        </div> 
+        <span class="footer__ligne"></span>
+        <div id="footer__droits">
+            <p>Crée par Apolline et Antony.<br /> Tous droits réservés</p>
+        </div>
     </footer>
-</div>
+    <div id="scrollUp" >
+        <a href="#top" title="Haut de page"><img id="arrowUp" src="Img/topArrow.png"/></a>
+    </div>
 </body>
 </html>
