@@ -1,0 +1,22 @@
+@mixin small-screen () {
+    @media screen and (max-width : map-get($breakpoint, small-screen)) {
+        @content;
+    }
+}
+@mixin medium-screen () {
+    @media screen and (max-width : map-get($breakpoint, medium-screen)) {
+        @content;
+    }
+}
+
+@mixin large-screen () {
+    @media screen and (max-width : map-get($breakpoint, large-screen)) {
+        @content;
+    }
+}
+
+@mixin border($color) {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color;
+}

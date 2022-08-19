@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Page d'accueil - Somewhere in the world</title>
 </head>
 <body>
-    <header>
-        <div id="header__mainImg">
+    <header> 
+        <div class="img-header">
             <nav>
-                <ul>
-                    <li><a href="index.html"><img id="nav__logo" src="img/logo.png" alt="logo"></a></li>
-                    <li class="dropDownMenu">
+                <input type="checkbox" id="menu-toggle" />
+                <label for="menu-toggle" class="menu-button-container">
+                    <div class="menu-button"></div>
+                </label>
+                <ul class="menu">
+                    <li><a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a></li>
+                    <li class="drop-down-menu">
                         <a href="#">Préparation</a>
-                        <ul class="underMenu">
+                        <ul class="under-menu">
                             <li><a href="">Sac a dos</a></li>
                             <li><a href="">Visa</a></li>
                             <li><a href="">Autre</a></li>
                         </ul>
                     </li>
-                    <li class="dropDownMenu">
+                    <li class="drop-down-menu">
                         <a href="#">Destination</a>
-                        <ul class="underMenu">
+                        <ul class="under-menu">
                             <li><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                         </ul>
                     </li>
-                    <li class="dropDownMenu">
+                    <li class="drop-down-menu">
                         <a href="#">Vanlife</a>
-                        <ul class="underMenu">
+                        <ul class="under-menu">
                             <li><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
@@ -42,11 +46,14 @@
                 </ul>
             </nav>
         </div>
+        <div class="scroll-up" >
+            <a href="#top" title="Haut de page"><img class="scroll-up__arrow" src="Img/topArrow.png"/></a>
+        </div>
     </header>
-    <section id="ourPresentation">
-        <article id="presentation">
-                <img id = "imgUs" src="Img/Us.jpg" alt="Us">
-                <div id="introduction">
+    <section class="presentation">
+        <article class="presentation__us">
+                <img class="presentation__us__img" src="Img/Us.jpg" alt="Us">
+                <div class="presentation__us__introduction">
             <p>
                 Hello !<br /> Nous sommes Apolline et Antony,<br /> deux baroudeurs amoureux de la nature. On s’est lancés dans la folle aventure de parcourir le monde !
             </p>
@@ -60,59 +67,68 @@
         </article>
     </section>
     <div class="slider-container">
-        <div class="slider">
-            <div class="slides">
+        <div class="slider-container__slider">
+            <div class="slider-container__slides">
                 <div id="slide1" class="slide">
                     <img class="slideImg" src="Img/last1.PNG" alt="last Article1">
-                    <span class="seeArticle"><a href="#">Voir l'article</a></span>
-                    <a id="try" class="slidePrev" href="#slide2" title="Prev"></a>
+                    <span class="see-article"><a href="#">Voir l'article</a></span>
+                    <a class="slidePrev" href="#slide2" title="Prev"></a>
                     <a class="slideNext" href="#slide2" title="Next"></a>
                 </div>
                 <div id="slide2" class="slide">
                     <img class="slideImg" src="Img/last2.PNG" alt="last Article2">
-                    <span class="seeArticle"><a href="#">Voir l'article</a></span>
+                    <span class="see-article"><a href="#">Voir l'article</a></span>
                     <a class="slideNext" href="#slide1" title="Next"></a>
                     <a class="slidePrev" href="#slide1" title="Prev"></a>
                 </div>                
             </div>
-            <div class="sliderNav">
-                <a class="sliderNavlink" href="#slide1"></a>
-                <a class="sliderNavlink" href="#slide2"></a>
+            <div class="slider-nav">
+                <a class="slider-nav__link" href="#slide1"></a>
+                <a class="slider-nav__link" href="#slide2"></a>
             </div>
         </div>
     </div>
     </section>
-    <div id="map">
+    <!-- phone section for last article -->
+    <section class="last-article">
+        <h1>Nos derniers articles</h1>
+            <article class="last-article__1">
+                <h2>Notre voyage en Nouvelle-Zélande</h2>
+                <a href="#"><img class="last-article__img" src="Img/OriginalBeach.jpg" alt="OriginalBeach"></a>
+            </article>
+            <article class="last-article__2">
+            <h2>Notre voyage en Australie</h2>
+            <a href="#"><img class="last-article__img" src="Img/OriginalBeach.jpg" alt="OriginalBeach"></a>
+    </section>
+    <div class="world">
         <h1>Notre tour du monde</h1>
         <p>Ils sont peux nombreux pour le moment mais voici la carte de nos pays parcouru</p>
-        <img class="worldMap" src="img/wolrdMap.png" alt="World Map">
+        <img class="world__map" src="img/wolrdMap.png" alt="World Map">
     </div>
     <footer>
-        <div id="footer__tellUs">
+        <div class="tellUs">
             <p>Donne nous ton avis</p>
             <p><a href="#">Nous contacter</a></p> 
         </div>
-        <span class="footer__ligne"></span>
-        <div id="footer__remenber">
+        <span class="ligne"></span>
+        <div class="remenber">
             <p>Nos Souvenirs</p>
             <div class="remenber__albums">
-                <div class="albums__album">      
+                <div class="remenber__albums__album">      
                     <p>Australie</p> 
                     <p><a href="#"><img src="Img/OriginalBeach.jpg" alt="Album Australie"></a></p>
                 </div>
-                <div class="albums__album">
+                <div class="remenber__albums__album">
                     <p>Nouvelle Zélande</p>
                     <p><a href="#"><img src="Img/OriginalPaysage.jpg" alt="Album Nouvelle Zélande"></a></p>
                 </div>    
             </div>
         </div>
-        <span class="footer__ligne"></span>
-        <div id="footer__droits">
-            <p>Crée par Apolline et Antony.<br /> Tous droits réservés</p>
+        <span class="ligne"></span>
+        <div class="droits">
+            <p>Copyright © 2022-2023 Somewhere in the world; Tous droits réservés - <a href="#">Mentions légales</a> - <a href="#">Politique de confidentialité</a></p>
         </div>
     </footer>
-    <div id="scrollUp" >
-        <a href="#top" title="Haut de page"><img id="arrowUp" src="Img/topArrow.png"/></a>
-    </div>
+    
 </body>
 </html>

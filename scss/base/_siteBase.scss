@@ -1,0 +1,17 @@
+body {
+  background-color: map-get($background-color, page);
+  color: map-get($color, white);
+  font-family: map-get($font-family, article);
+  font-size: map-get($font-size, article);
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+a {
+  color: map-get($color, white);
+  text-decoration: none;
+}

@@ -1,0 +1,36 @@
+/* border test */
+$tb : 2px solid red; 
+
+$color: (
+    white:#fff,
+    title: #22303F
+);
+
+$background-color: (
+    page: #e8b38730,
+    article: #22303F
+);
+
+/* Police size */
+$font-size: (
+    nav: 1.4rem,
+    h1: 1.5rem,
+    h2: 1.3rem,
+    h3: 1.1rem,
+    text: 1.2rem
+);
+
+/* Font-family */
+$font-family: (
+    nav: 'Trebuchet MS' 'Lucida Sans Unicode' 'Lucida Grande' 'Lucida Sans' 'Arial' 'sans-serif',
+    title: 'Verdana' 'Geneva' 'Tahoma' 'sans-serif',
+    text: 'Segoe UI' 'Tahoma' 'Geneva' 'Verdana' 'sans-serif',
+);
+
+/* Media size : breakpoint */
+
+$breakpoint: (
+    small-screen : 500px,
+    medium-screen : 1000px,
+    large-screen : 4000px
+)

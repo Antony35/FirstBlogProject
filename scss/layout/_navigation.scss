@@ -1,0 +1,185 @@
+/* Part one creation of the static menu */
+
+nav {    
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top: 0%;
+  text-transform: uppercase; 
+  font-size: 1.8rem;
+  padding-top: 2%;
+  @include large-screen {
+  .phone-burger {
+    display: none;
+  }
+  #menu-toggle {
+    display: none;
+  }
+}
+  & .logo {
+    position: relative;
+    height: 120px;
+    bottom: 25%;
+  }   
+  & > ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+  & ul {
+  list-style-type: none;
+  }
+  & > ul > li {
+    position: relative;
+  }
+  & > ul > li > a {
+    position: relative;
+    top: 25%;
+  }
+}
+
+/* Nav medium and small screen */
+
+@include medium-screen {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: map-get($background-color, article);
+    color: map-get($color, white);
+    height: 50px;
+    padding: 1em;
+  }
+  .logo {
+    display: none;
+  }    
+  .menu {
+   display: flex;
+   flex-direction: column;
+   list-style-type: none;
+   padding: 0rem 2rem;
+   & > li {
+    font-size: 1rem;
+    margin: 2rem 0rem;
+    height: 0px;
+    overflow: hidden;
+    &:hover > a {
+      color: #fff;
+    }
+   }
+
+  }
+  
+  .menu-button-container {
+    display: flex;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle {
+    display: none;
+  } 
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+  } 
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0;
+    transform: rotate(405deg);
+  }
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    margin-top: 0;
+    background-color: map-get($map: $background-color, $key: article);
+  }
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0;
+    transform: rotate(-405deg);
+  }
+  #menu-toggle:checked ~ .menu {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    background-color: map-get($map: $background-color, $key: article);
+  & > li {
+    height: 100%;
+  }
+  }
+}
+/* The Arrow */
+.drop-down-menu > a::after {
+  content: '>';
+  font-size: 1rem;
+  padding-left: 5px;
+  vertical-align:25%;
+  display: inline-block;
+}
+
+@keyframes rotate-arrow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }   
+}
+
+.drop-down-menu:hover > a::after {
+  animation: rotate-arrow 0.1s forwards;
+}
+
+
+/* Part two cration of the under menu */
+.under-menu {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: left;
+  background-color: rgba(162, 188, 184, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 0;
+  & li > a {
+    display: flex; 
+    padding-left: 5%;
+    font-size: 0.8em;
+    text-transform: lowercase;
+  }
+}
+
+/* Part three animation on the menu  */
+
+nav > ul > li:hover > a,
+.under-menu > li:hover > a {
+  color: map-get($color, title);
+}
+
+@keyframes under-menu-appear {
+  from {
+    border-top: rgba(162, 188, 184, 0.5);
+  }
+  to {
+    max-height: 100%;
+  }
+}
+
+.drop-down-menu:hover > .under-menu {
+    animation: under-menu-appear 1s forwards;
+}

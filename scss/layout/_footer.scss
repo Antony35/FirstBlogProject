@@ -1,0 +1,66 @@
+/* Footer */
+
+footer {
+  border: 1px solid rgb(34, 48, 63);
+  background-color: rgb(34, 48, 63);
+  margin-top: 10%;
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+  footer > .tellUs, .remenber, .droits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+    margin-top: 0.5%;
+  }
+.tellUs > p > a:hover
+{
+  font-size: 1.2em;
+  border: 2px solid rgba(162, 188, 184, 0.5);
+}
+
+.remenber__albums
+{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  &__album {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100px;
+    height: 130px;
+  }
+  &__album > p > a > img {
+    border: 2px solid rgba(162, 188, 184, 0.5) ;
+    box-sizing: border-box;
+    position: relative;
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+.ligne {
+    height: 100%;
+    width: 1px;
+    background-color: rgba(162, 188, 184, 0.5);
+}
+
+@include small-screen {
+  footer {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ligne {
+    margin: 20px;
+    height: 1px;
+    width: 80%;
+  }
+}
