@@ -1,17 +1,19 @@
 {
   "name": "firstblogproject",
   "version": "1.0.0",
-  "description": "Travel blog",
+  "description": "Notre blog de voyage",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./scss/main.scss:./css/style.css",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed",
+    "sassP": "sass --watch ./scss/main.scss:./css/prefixed/style.css  --style compressed"
+
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Antony35/FirstBlogProject.git"
   },
-  "author": "Antony Huart",
+  "author": "Antony",
   "license": "ISC",
   "browserslist": "last 4 versions",
   "bugs": {

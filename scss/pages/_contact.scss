@@ -1,0 +1,78 @@
+.img-header-contact {
+  height: 200px;
+  background: linear-gradient(to top, map-get($color, primary), map-get($color, secondary));
+}
+
+// Main container
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    & > h1 {
+      color: map-get($color, secondary);
+      text-align: center;
+      padding: 3% 0;
+    }
+    // Preferance of the form block
+    & > form {
+      border: 3px solid map-get($color, border);
+      background-color: map-get($color, secondary);
+      width: 60%;
+      margin-bottom: 10%;
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 5px;
+        & > fieldset {
+          border: none;
+          width: 60%; //define the size here to get the good allignement between block
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px 20px;
+            & > input {
+              border-radius: 100px;
+              transition: background-color 750ms;
+                &:focus {
+                  outline: none;
+                  border: 2px solid green;
+                }
+                &:not(:focus):invalid {
+                  background-color: red;
+                  border: 1px solid red;
+                  color: white;
+                }
+            }
+            & > .name {
+              grid-column-start: 1;
+              grid-column-end: 2;
+              grid-row-start: 1;
+              grid-row-end: 2;
+            }
+            & > .email {
+              grid-column-start: 2;
+              grid-column-end: 3;
+              grid-row-start: 1;
+              grid-row-end: 2;
+            }
+            & > .subject {
+              grid-column-start: 1;
+              grid-column-end: 2; 
+            }
+            & > .message {
+              grid-column-start: 1;
+              grid-column-end: 3;
+              min-height: 200px;
+              border-radius: 10px;
+                &:focus {
+                  outline: none;
+                  border: 2px solid green;
+                }
+            }
+            & > .button {
+              margin-top: 10px;
+              max-width: 50%;
+            }
+        }
+    }
+}

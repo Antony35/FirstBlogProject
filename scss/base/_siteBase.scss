@@ -1,17 +1,33 @@
-body {
-  background-color: map-get($background-color, page);
-  color: map-get($color, white);
-  font-family: map-get($font-family, article);
-  font-size: map-get($font-size, article);
-}
-
 * {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  color: map-get($color, white);
-  text-decoration: none;
-}
+body {
+    background-color: map-get($colors, primary);
+    font-family: map-get($font-family, text);
+    font-size: map-get($font-size, text);
+    color: map-get($colors, primary);
+  }
+  
+  h1 h2 h3 {
+    font-family: map-get($font-family, title);
+  }
+
+  h1 {
+    font-size: map-get($font-size, h1);
+  }
+  
+  h2 {
+    font-size: map-get($font-size, h2);
+  }
+  
+  h3 {
+    font-size: map-get($font-size, h3);
+  }
+
+  a {
+    color: map-get($colors, primary);
+    text-decoration: none;
+  }

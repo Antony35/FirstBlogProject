@@ -1,127 +1,34 @@
-.img-header {
-  background: url(../../Img/OriginalPaysage.jpg) no-repeat;
-  background-position: center center;
-  background-size: cover;
-  height: 850px;
-}
-
-.presentation {
-  font-size: map-get($font-size, text);
-  background-color: map-get($background-color, article );     
-  margin: 10% 0% 10% 0%;
+.about-us {
+  background-color: (map-get($colors, secondary));
+  margin: auto;
+  padding: 5%;
   display: flex;
-  justify-content: center;
-  &__us {
-    display: flex;
-    align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    max-height: 200px;
+    @include main-border(map-get($colors, border));
+  }
+  &__text {
+    padding: 0 5%;
     text-align: center;
-    &__img {
-      @include border(#fff);
-      margin-left: 60px;
-      max-width: 35%;
-      max-height: 65%;
-      border-radius: 10px;
-    }
-    &__introduction > p {
-      margin-left: 100px;
-      padding: 10px;
-      & > a {
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        &:hover {
-          display: inline-block;
-          transform: scale(1.2);
-        }
+    max-width: 66%;
+    line-height: 2;
+    a {
+      transition: 400ms ease-in-out;
+      &:hover {
+        display: inline-block;
+        transform: rotate(360deg);
       }
     }
   }
 }
-
-/* Presentation small screen */
-
-@include small-screen {
-  .presentation {
-    width: 100%;
-    height: 650px;
-    &__us {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    &__img {
-      margin: 0;
-      }
-      &__introduction > p {
-        font-size: 1.4rem;
-        margin: 30px 40px;  
-      }
-    }
-  }
-}
-
-@include large-screen {
-  .last-article {
-    display: none;
-  }
-}
-  
-@include small-screen {
-  .last-article {
-   display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 30px;
-    & > h1 {
-      color: map-get($map: $color, $key: title);
-    }
-    &__1, &__2 {
-      background-color: map-get($map: $background-color, $key: article);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      height: 200px;
-      width: 80%;      
-      h2 {
-        width: 60%;
-      }
-    }
-    &__img {
-      @include border(#fff);
-      border-radius: 10px ;
-      width: 80%;
-    }
-  }
-}
-  
-
-
-/* World Map */
-.world
-{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  & > h1 {
-    color: map-get($color, title);
-  }
-  & > p {
-    color: map-get($color, title);
-    margin-top: 2px;
-  }
-  &__map {
-    max-width: 86%;
-    max-height: 500px;
-    margin: 5% 10% 10%% 10%;
-  }
-}
-
-@include small-screen {
-  .world {
-    margin: 40px 0;
+.comming-soon {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 400px;
-  }
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+    color: (map-get($colors, secondary));
+    font-size: 2rem;
 }
