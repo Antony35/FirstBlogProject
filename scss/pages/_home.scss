@@ -24,6 +24,7 @@
   }
 }
 .comming-soon {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 1000px;
@@ -31,4 +32,14 @@
     align-items: center;
     color: (map-get($colors, secondary));
     font-size: 2rem;
+/*    &:hover {
+      p {
+        transition: all 2000ms, 1500ms 200ms;
+        border: 1px solid green;
+        position: absolute;
+        color: red;
+        transform: translateX(200%) scale(0.1) ;
+  
+      }
+    } */
 }

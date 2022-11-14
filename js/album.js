@@ -3,10 +3,13 @@ let imgContainer = document.querySelector('.container__imgs');
 let link = document.querySelector('.to-album-name');
 let link1 = document.querySelector('.to-album-img');
 let next = document.querySelector('.container__right-arrow');
-let prev = document.querySelector('.container__left-arrow')
+let prev = document.querySelector('.container__left-arrow');
+let com = document.querySelector('.comming-soon');
+
+let p = com.querySelector('p');
 let myImg = imgContainer.querySelectorAll('img');
 
-function Album(albumName, albumPage, imgs, alt, newImg) {
+function Album(albumName, albumPage, imgs, alt) {
     this.albumName = albumName,
     this.albumPage = albumPage,
     this.imgs =  imgs,
@@ -19,22 +22,27 @@ let albumVan = new Album('Van', 'album-van.html', ['./Img/galery/carouselle/van1
 
 let albums = [albumAustralia, albumNewZeland, albumVan];
 let albumPos = 0;
+let id = null;
 
 function setAlbum(album) {
 
-    albumTitle.textContent = album.albumName;
+    setTimeout(() => {
+        albumTitle.textContent = album.albumName;
 
-    link.setAttribute('href', album.albumPage);
-    link1.setAttribute('href', album.albumPage);
+        link.setAttribute('href', album.albumPage);
+        link1.setAttribute('href', album.albumPage);
 
-    myImg.forEach(function(elem, index) {
-        elem.setAttribute('src', album.imgs[index]);
-        elem.setAttribute('alt', album.alt[index]);
-    });
-
+        myImg.forEach(function(elem, index) {
+            elem.setAttribute('src', album.imgs[index]);
+            elem.setAttribute('alt', album.alt[index]);
+        });
+    }, 500);
 }
 
 function nextAlbum() {
+
+    albumNameAnnimation('0%', '30%', '-30%')
+    albumImgAnnimation()        
     if (albumPos == albums.lastIndexOf(albums[albums.length-1])    ) {
         albumPos = 0;
         setAlbum(albums[albumPos]);
@@ -46,6 +54,9 @@ function nextAlbum() {
 } 
 
 function prevAlbum() {
+
+    albumNameAnnimation('0%', '-30%', '30%')
+    albumImgAnnimation()
     if (albumPos == 0) {
         albumPos = albums.lastIndexOf(albums[albums.length-1])
         setAlbum(albums[albumPos]);
@@ -55,5 +66,24 @@ function prevAlbum() {
         setAlbum(albums[albumPos]);
     }
 }
+
+
+function albumNameAnnimation(origine, fin, debut) {
+    albumTitle.animate({
+        transform: ['translateX(' + origine + ')','translateX(' + fin + ')','translateX(' + debut + ')' ,'translateX(' + origine + ')'],
+        opacity: [1, 0, 0, 1],
+        easing: [ 'ease-in', 'ease-out' ],
+    }, 1000);
+}
+
+function albumImgAnnimation() {
+    myImg.forEach(function(elem) {
+        elem.animate({
+            opacity: [1, 0, 0, 1]
+        }, 1000); 
+    });
+}
+
 next.addEventListener('click', nextAlbum);
 prev.addEventListener('click', prevAlbum);
+

@@ -262,6 +262,7 @@ footer {
 }
 
 .comming-soon {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 1000px;
@@ -269,6 +270,16 @@ footer {
   align-items: center;
   color: #22303F;
   font-size: 2rem;
+  /*    &:hover {
+        p {
+          transition: all 2000ms, 1500ms 200ms;
+          border: 1px solid green;
+          position: absolute;
+          color: red;
+          transform: translateX(200%) scale(0.1) ;
+
+        }
+      } */
 }
 
 /*# sourceMappingURL=style.css.map */
