@@ -31,7 +31,7 @@
 @mixin menu-style {
   font-family: map-get($font-family, title);
   font-size: map-get($font-size, menu );  
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
 
@@ -39,9 +39,7 @@
 @mixin nav-arrow {
   border-style: solid;
   border-color: map-get($colors, primary ) transparent transparent transparent;
-  border-width: 16px 7px 0 7px;
-  height: 0px;
-  width: 0px;
+  border-width: 14px 5px 0 5px;
 }
 
 @mixin main-border($color) {
