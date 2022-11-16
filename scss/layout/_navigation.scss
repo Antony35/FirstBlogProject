@@ -1,4 +1,8 @@
 //definine sticky menu and created a 3 rows in grid
+.background {
+  background: radial-gradient(circle at 48.4% 30%, lighten(map-get($colors, secondary),3),lighten(map-get($colors, secondary),6),lighten(map-get($colors, secondary),9), lighten(map-get($colors, secondary),12));
+}
+
 nav {
   position: sticky;
   top: 5px;
@@ -36,21 +40,53 @@ ul {
   display: flex;
   justify-content: space-around;
   &__drop-down-menu {
+    position: relative;
     &__nav-arrow {
       display: inline-block;
       @include nav-arrow;
     }
-    //menu appear when mouse hover child of drop-down-menu
-    &:hover ul {
-      visibility: visible; 
+    //show under-menu when mouse on drop-down-menu
+    &:hover  ul{  
+      display: block;
+    }
+    &__2:hover  ul {
+      position: absolute;
+      left: 100%;
+      transform: translateY(-42.5px);
+      background-color: map-get($colors, secondary);
+      border-left: 2px solid #fff;
+      border-top: 2px solid #fff;
+      overflow: visible;
+      height: auto;
     }
     //hide under-menu and give is position 
     &__under-menu {
-      border-radius: 10px;
-      padding-left: 20px;
-      margin-top: 20px;
-      visibility: hidden;
+      display: none;
+      border-top: 2px solid #fff;
+      position: absolute;
+      background-color: map-get($colors, secondary);
+      right: 0;
+      left: 0;
       font-size: map-get($font-size, text);
+      li > :hover:not(.main-menu__drop-down-menu__under-menu__2) {
+        background-color: lighten(map-get($colors, secondary), 10);
+      }
+      &--preparatif {
+        right: -35px;
+      }
+      &--pictures {
+        right: -170px;
+      }
+      li > a {
+        display: block;
+        padding: 10px 0 10px 20px;
+      }
+      &__2 {
+        overflow: hidden;
+        height: 0;
+      }
+      
     }
   }
 }
+

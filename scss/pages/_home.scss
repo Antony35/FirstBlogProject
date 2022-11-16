@@ -23,13 +23,29 @@
     }
   }
 }
+
+
 .comming-soon {
     position: relative;
     display: flex;
     flex-direction: column;
     height: 1000px;
     justify-content: center;
+    gap: 100px;
     align-items: center;
     color: (map-get($colors, secondary));
     font-size: 2rem;
 }
+
+.rectangle {
+  height: 60px;
+  width: 500px;
+  border-radius: 10px;
+  border: 3px solid blue;
+  &--jaune {
+    background-color: yellow;
+  }
+}
+
+
+

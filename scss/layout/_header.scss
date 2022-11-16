@@ -1,10 +1,5 @@
-.background-header {
+.home-img {
   background: url('../Img/OriginalPaysage.jpg') no-repeat;
   background-size: cover;
   height: 850px;
-  &--linear-gardiant {
-    background: none;
-    background-color: red;
-    height: 200px;
-  }
 }

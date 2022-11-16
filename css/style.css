@@ -50,15 +50,14 @@ a {
   text-decoration: none;
 }
 
-.background-header {
+.home-img {
   background: url("../Img/OriginalPaysage.jpg") no-repeat;
   background-size: cover;
   height: 850px;
 }
-.background-header--linear-gardiant {
-  background: none;
-  background-color: red;
-  height: 200px;
+
+.background {
+  background: radial-gradient(circle at 48.4% 30%, #273849, #2d3f53, #32475d, #374e67);
 }
 
 nav {
@@ -95,28 +94,58 @@ ul {
 .main-menu {
   font-family: "caviar_dreamsregular";
   font-size: 1.3rem;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   display: flex;
   justify-content: space-around;
+}
+.main-menu__drop-down-menu {
+  position: relative;
 }
 .main-menu__drop-down-menu__nav-arrow {
   display: inline-block;
   border-style: solid;
   border-color: #FAF0E8 transparent transparent transparent;
-  border-width: 16px 7px 0 7px;
-  height: 0px;
-  width: 0px;
+  border-width: 14px 5px 0 5px;
 }
 .main-menu__drop-down-menu:hover ul {
-  visibility: visible;
+  display: block;
+}
+.main-menu__drop-down-menu__2:hover ul {
+  position: absolute;
+  left: 100%;
+  transform: translateY(-42.5px);
+  background-color: #22303F;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  overflow: visible;
+  height: auto;
 }
 .main-menu__drop-down-menu__under-menu {
-  border-radius: 10px;
-  padding-left: 20px;
-  margin-top: 20px;
-  visibility: hidden;
+  display: none;
+  border-top: 2px solid #fff;
+  position: absolute;
+  background-color: #22303F;
+  right: 0;
+  left: 0;
   font-size: 1.1rem;
+}
+.main-menu__drop-down-menu__under-menu li > :hover:not(.main-menu__drop-down-menu__under-menu__2) {
+  background-color: #344960;
+}
+.main-menu__drop-down-menu__under-menu--preparatif {
+  right: -35px;
+}
+.main-menu__drop-down-menu__under-menu--pictures {
+  right: -170px;
+}
+.main-menu__drop-down-menu__under-menu li > a {
+  display: block;
+  padding: 10px 0 10px 20px;
+}
+.main-menu__drop-down-menu__under-menu__2 {
+  overflow: hidden;
+  height: 0;
 }
 
 footer {
@@ -267,19 +296,20 @@ footer {
   flex-direction: column;
   height: 1000px;
   justify-content: center;
+  gap: 100px;
   align-items: center;
   color: #22303F;
   font-size: 2rem;
-  /*    &:hover {
-        p {
-          transition: all 2000ms, 1500ms 200ms;
-          border: 1px solid green;
-          position: absolute;
-          color: red;
-          transform: translateX(200%) scale(0.1) ;
+}
 
-        }
-      } */
+.rectangle {
+  height: 60px;
+  width: 500px;
+  border-radius: 10px;
+  border: 3px solid blue;
+}
+.rectangle--jaune {
+  background-color: yellow;
 }
 
 /*# sourceMappingURL=style.css.map */
