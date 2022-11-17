@@ -130,10 +130,14 @@ ul {
   left: 0;
   font-size: 1.1rem;
 }
+<<<<<<< HEAD
 .main-menu__drop-down-menu__under-menu li {
   padding: 10px 0 10px 20px;
 }
 .main-menu__drop-down-menu__under-menu li:hover:not(.main-menu__drop-down-menu__under-menu__2) {
+=======
+.main-menu__drop-down-menu__under-menu li > :hover:not(.main-menu__drop-down-menu__under-menu__2) {
+>>>>>>> waitingPage
   background-color: #344960;
 }
 .main-menu__drop-down-menu__under-menu--preparatif {
@@ -142,6 +146,13 @@ ul {
 .main-menu__drop-down-menu__under-menu--pictures {
   right: -170px;
 }
+<<<<<<< HEAD
+=======
+.main-menu__drop-down-menu__under-menu li > a {
+  display: block;
+  padding: 10px 0 10px 20px;
+}
+>>>>>>> waitingPage
 .main-menu__drop-down-menu__under-menu__2 {
   transform-origin: bottom;
   height: 0;
@@ -315,6 +326,7 @@ footer {
   background-color: yellow;
 }
 
+<<<<<<< HEAD
 .in-progress {
   display: flex;
   flex-direction: column;
@@ -595,4 +607,6 @@ footer {
   }
 }
 
+=======
+>>>>>>> waitingPage
 /*# sourceMappingURL=style.css.map */
