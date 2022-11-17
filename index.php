@@ -12,6 +12,7 @@
     <header>
         <?php include_once('./header.php'); ?>     
     </header>
+ 
     <div class="home-img"></div>
     <section class="about-us">
         <img src="./Img/Us.jpg" alt="Une photo de nous Antony et Apolline le sourire aux lèvre">
@@ -24,13 +25,8 @@
         </article>
     </section>
     <section class="comming-soon">
-        <div class="rectangle">
-            <p>COMING SOON</p>
-        </div>
-        <div class="rectangle rectangle--jaune">
-            <p>COMING SOON</p>
-        </div>    
-    </section>
+        <p>COMING SOON</p>
+   </section>
     <footer>
         <?php include_once('./footer.php'); ?>
     </footer>
