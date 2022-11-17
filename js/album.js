@@ -4,9 +4,7 @@ let link = document.querySelector('.to-album-name');
 let link1 = document.querySelector('.to-album-img');
 let next = document.querySelector('.container__right-arrow');
 let prev = document.querySelector('.container__left-arrow');
-let com = document.querySelector('.comming-soon');
 
-let p = com.querySelector('p');
 let myImg = imgContainer.querySelectorAll('img');
 
 function Album(albumName, albumPage, imgs, alt) {
