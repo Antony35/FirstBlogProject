@@ -1,3 +1,4 @@
+<a id="top-page"></a>
 <div class="background">
   <nav>
     <a href="index.php">
@@ -54,3 +55,10 @@
     </ul>
   </nav>
 </div>
+<a href="#top-page">
+  <div class="top-arrow">
+    <div class="first-part"></div>
+    <div class="second-part"></div>
+    <div class="third-part"></div>
+  </div>
+</a>

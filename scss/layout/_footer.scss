@@ -20,44 +20,29 @@ footer {
   }
 }
 
-.newsletter {
+.contact {
   grid-row: 1/3;
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  form {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    input {
-      text-align: center;
-      @include main-border(map-get($colors, border));
-      @include good-color-for-good-bg(map-get($colors, primary))      
-    }
-    &::placeholder {
-      text-align: center;
-      color: map-get($colors, secondary);
-    }
-    .btn-subscribe {
-      align-self: center;
-      height: 30px;
-      width: 50%;
-      border-radius: 10rem;
-      transition: transform 450ms ease-in-out, background-color 300ms 150ms ease-in-out;
-      &:hover {
-        background-color: adjust-color($color: map-get($colors, secondary), $hue: 0, $saturation: 0%, $lightness: 20%, $alpha: 0.8);
-        box-shadow: none;
-        border-width: 2px;
-        color: map-get($colors, primary);
-        transform: scale(1.15);
-      }
+  .btn-contact {
+    padding: 10px;
+    border-radius: 10rem;
+    background: lighten(map-get($colors, secondary),10);
+    transition: transform 450ms ease-in-out, background-color 300ms 150ms ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background: lighten(map-get($colors, secondary),20);
+      box-shadow: none;
+      border-width: 2px;
+      color: map-get($colors, primary);
+      transform: scale(1.25);
     }
   }
 }
-  
+
 .album {
   grid-row: 1/3;
   grid-column: 3/7;

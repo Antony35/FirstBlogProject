@@ -22,14 +22,14 @@
   box-sizing: border-box;
 }
 
-body {
+body, button {
   background-color: #FAF0E8;
   font-family: "caviar_dreamsregular";
   font-size: 1.1rem;
   color: #FAF0E8;
 }
 
-h1 h2 h3 {
+h1, h2, h3 {
   font-family: "caviar_dreamsregular";
 }
 
@@ -145,6 +145,44 @@ ul {
   background-color: #22303F;
 }
 
+.top-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  position: fixed;
+}
+.top-arrow .first-part {
+  background: #3d5671;
+  height: 35px;
+  width: 8px;
+  border-radius: 10rem;
+}
+.top-arrow .second-part {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #3d5671;
+  height: 25px;
+  width: 8px;
+  border-radius: 10rem;
+  transform: rotate(45deg);
+}
+.top-arrow .third-part {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #3d5671;
+  height: 25px;
+  width: 8px;
+  border-radius: 10rem;
+  transform: rotate(-45deg);
+}
+
 footer {
   min-height: 280px;
   background-color: #22303F;
@@ -167,46 +205,27 @@ footer {
   grid-column: 7/7;
 }
 
-.newsletter {
+.contact {
   grid-row: 1/3;
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
-.newsletter form {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.newsletter form input {
-  text-align: center;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #62767B;
-  border-radius: 10px;
-  box-shadow: 2px 1px;
-  color: #22303F;
-}
-.newsletter form::placeholder {
-  text-align: center;
-  color: #22303F;
-}
-.newsletter form .btn-subscribe {
-  align-self: center;
-  height: 30px;
-  width: 50%;
+.contact .btn-contact {
+  padding: 10px;
   border-radius: 10rem;
+  background: #344960;
   transition: transform 450ms ease-in-out, background-color 300ms 150ms ease-in-out;
 }
-.newsletter form .btn-subscribe:hover {
-  background-color: #466281;
+.contact .btn-contact:hover {
+  cursor: pointer;
+  background: #466281;
   box-shadow: none;
   border-width: 2px;
   color: #FAF0E8;
-  transform: scale(1.15);
+  transform: scale(1.25);
 }
 
 .album {

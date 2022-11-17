@@ -93,3 +93,40 @@ ul {
   }
 }
 
+.top-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  position: fixed;
+  .first-part {
+    background: lighten(map-get($colors, secondary),15);
+    height: 35px;
+    width: 8px;
+    border-radius: 10rem;
+  }
+  .second-part {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: lighten(map-get($colors, secondary),15);
+    height: 25px;
+    width: 8px;
+    border-radius: 10rem;
+    transform: rotate(45deg);
+  }
+  .third-part {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: lighten(map-get($colors, secondary),15);
+    height: 25px;
+    width: 8px;
+    border-radius: 10rem;
+    transform: rotate(-45deg);
+  }
+}

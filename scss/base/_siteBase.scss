@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 
-body {
+body, button {
     background-color: map-get($colors, primary);
     font-family: map-get($font-family, text);
     font-size: map-get($font-size, text);
     color: map-get($colors, primary);
   }
   
-  h1 h2 h3 {
+  h1, h2, h3 {
     font-family: map-get($font-family, title);
   }
 
