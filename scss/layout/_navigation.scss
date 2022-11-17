@@ -68,7 +68,10 @@ ul {
       right: 0;
       left: 0;
       font-size: map-get($font-size, text);
-      li > :hover:not(.main-menu__drop-down-menu__under-menu__2) {
+      li {
+        padding: 10px 0 10px 20px;
+      }
+      li:hover:not(.main-menu__drop-down-menu__under-menu__2) {
         background-color: lighten(map-get($colors, secondary), 10);
       }
       &--preparatif {
@@ -77,10 +80,6 @@ ul {
       &--pictures {
         right: -170px;
       }
-      li > a {
-        display: block;
-        padding: 10px 0 10px 20px;
-      }
       &__2 {
         transform-origin: bottom;
         height: 0;
@@ -88,7 +87,6 @@ ul {
         position: absolute;
         left: 100%;
         background-color: map-get($colors, secondary);
-       
       }
       
     }

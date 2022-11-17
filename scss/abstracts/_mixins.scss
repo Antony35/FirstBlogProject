@@ -49,3 +49,10 @@
   border-radius: 10px;
   box-shadow: 2px 1px;
 }
+
+@mixin dot() {
+  background: radial-gradient(circle, darken(#fff,10), darken(#fff, 20), darken(#fff, 60));
+    height: 10px;
+    width: 10px;
+    border-radius: 10rem;
+}
