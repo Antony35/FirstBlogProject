@@ -11,7 +11,7 @@
 }
 
 @mixin large-screen() {
-  @media screen and (max-width : map-get($breakpoint, large-screen)) {
+  @media screen and (min-width : map-get($breakpoint, large-screen)) {
   @content;
   }
 }

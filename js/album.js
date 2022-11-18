@@ -41,7 +41,7 @@ function nextAlbum() {
 
     albumNameAnnimation('0%', '30%', '-30%')
     albumImgAnnimation()        
-    if (albumPos == albums.lastIndexOf(albums[albums.length-1])    ) {
+    if (albumPos == albums.lastIndexOf(albums[albums.length-1])) {
         albumPos = 0;
         setAlbum(albums[albumPos]);
     }

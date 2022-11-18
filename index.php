@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/album.js" async></script>
+    <script src="./js/menu-burger.js" async></script>
     <title>Page d'accueil</title>
 </head>
-<body>
+<body class="close-nav">
     <header>
         <?php include_once('./header.php'); ?>     
     </header>
- 
+    <div id="close-nav">
     <div class="home-img"></div>
     <section class="about-us">
         <img src="./Img/Us.jpg" alt="Une photo de nous Antony et Apolline le sourire aux lèvre">
@@ -27,8 +28,10 @@
     <section class="comming-soon">
         <p>COMING SOON</p>
    </section>
+   </div>
+   </body>
     <footer>
         <?php include_once('./footer.php'); ?>
     </footer>
-</body>
+
 </html>

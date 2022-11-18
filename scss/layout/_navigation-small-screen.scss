@@ -1,0 +1,84 @@
+ /* main-menu menu */
+@include medium-screen {
+  .main-menu {
+    border-top: 2px solid map-get($colors, primary);
+    @include menu-style;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at 48.4% 30%, lighten(map-get($colors, secondary),3),lighten(map-get($colors, secondary),6),lighten(map-get($colors, secondary),9), lighten(map-get($colors, secondary),12));
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 78px;
+    //left: -260px;
+    transition: left 0.5s ease;
+    &__drop-down-menu {
+      cursor: pointer;
+      position: relative;
+      &__nav-arrow {
+        display: inline-block;
+        @include nav-arrow;
+      }
+    }
+    //first lvl
+    & > li > a {
+      padding: 10px 0 10px 20px;
+      display: block;
+      &:hover {
+        background: lighten(map-get($colors, secondary),30);
+      }
+    }
+    //second lvl
+    &__drop-down-menu > ul > li > a {
+      padding: 10px 0 10px 20px;
+      display: block;
+      &:hover {
+        background: lighten(map-get($colors, secondary),20);          
+      }
+    }
+    //third lvl
+    &__drop-down-menu__under-menu ul > li > a {
+      padding: 10px 0 10px 20px;
+      display: block;
+      //over third lvl
+        &:hover {
+          background: lighten(map-get($colors, secondary),10);                      
+      }
+    }
+    &__drop-down-menu__under-menu {
+      height: 0;
+      overflow: hidden;
+      &__2 {
+        height: 0;
+        overflow: hidden;          
+      }
+    }
+  }
+
+  /* Active class */
+  .main-menu.active {
+    left: 0px;
+  }
+
+  /* Icône burger */
+  .burger-icon {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 15px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    span {
+      display: block;
+      width: 35px;
+      height: 4px;
+      border-radius: 10rem;
+      background-color: map-get($colors, primary);
+    }
+  }
+}

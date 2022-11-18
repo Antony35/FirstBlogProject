@@ -50,24 +50,34 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @include medium-screen {
+    justify-content: center;
+    gap: 5px
+  }
   &__name {
     margin-top: 20px;
+    
   }
   .container {
-    margin: auto;
-    width: 565px;
-    height: 120px;
     position: relative;
     &__imgs {
       display: flex;
       justify-content: center;
       gap: 5px;
+      img {
+        @include medium-screen {
+          max-width: 25%;
+        }
+      }
     }
     &__left-arrow {
       cursor: pointer;
       position: absolute;
       top: 55px;
-      left: -10px;
+      @include medium-screen {
+        top: 25px;
+      }
+      left: 10px;
       transform: rotate(45deg);
       border-width: 10px; 
       border-style: solid;
@@ -76,8 +86,11 @@ footer {
     &__right-arrow {
       cursor: pointer;
       position: absolute;
+      @include medium-screen {
+        top: 25px;
+      }
       top: 55px;
-      right: -10px;
+      right: 10px;
       transform: rotate(45deg);
       border-width: 10px; 
       border-style: solid;
