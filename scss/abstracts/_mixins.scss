@@ -39,7 +39,7 @@
 @mixin nav-arrow {
   border-style: solid;
   border-color: map-get($colors, primary ) transparent transparent transparent;
-  border-width: 14px 5px 0 5px;
+  border-width: 8px 6px 0 6px;
 }
 
 @mixin main-border($color) {

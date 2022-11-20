@@ -1,65 +1,71 @@
-//open class burger menu
+//open close burger menu
 let sidenav = document.getElementById("mySidenav");
 let openBtn = document.getElementById("openBtn");
 let closeBtn = document.getElementById("close-nav");
-
-openBtn.onclick = openNav;
+let menu = document.querySelector('.main-menu');
+let html = document.querySelector('html');
+openBtn.onclick = openCloseNav;
 closeBtn.onclick = closeNav;
 
 // Set the width of the side navigation to 250px
-function openNav() {
-  sidenav.classList.add("active");
-  document.documentElement.style.overflow = 'hidden';
+function openCloseNav() {
+  sidenav.classList.toggle("active");
+  closeBtn.classList.toggle("opacity-page");
+  html.classList.toggle("lock-page");
 }
 
 // Set the width of the side navigation to 0
 function closeNav() {
   sidenav.classList.remove("active");
-  document.documentElement.style.overflow = 'visible';
+  closeBtn.classList.remove("opacity-page");
+  html.classList.remove("lock-page");
 }
-//show under menu in burger menu
-let showUnderMenus = document.querySelectorAll(".drop-menu");
-let showUnderMenus2 = document.querySelectorAll(".drop-menu-2")
-let underMenus = document.querySelectorAll(".main-menu__drop-down-menu__under-menu");
-let underMenus2 = document.querySelectorAll(".main-menu__drop-down-menu__under-menu__2");
 
+//drop-menu
 
-let allowed = null;
-let open = false;
+let dropMenus = document.querySelectorAll('.drop-menu');
+let underMenus = document.querySelectorAll('.under-menu');
+let dropMenus2 = document.querySelectorAll('.drop-menu-2');
+let underMenus2 = document.querySelectorAll('.under-menu-2');
+let navArrows = document.querySelectorAll('.nav-arrow');
+let navArrows2 = document.querySelectorAll('.nav-arrow-2');
 
+navArrows.forEach(function(arow, index) {
+  dropMenus.forEach(function(elem, index1){
+    elem.addEventListener('click', function() {
+      underMenus.forEach(function(elem, i) {
+        if(index1 == i) {
+          elem.parentNode.classList.toggle('background-li'); 
+          elem.classList.toggle('under-menu');
+          if (index == i) {
+            arow.classList.toggle('rotate-arrow');
+            console.log('lvl 1 : ' + i);
+            console.log('lvl 1 : ' + index);
+            console.log(arow);
+          }
+        }   
+      })
+    })
+  })
+})
 
-showUnderMenus.forEach (function(elem, i) {
-  elem.addEventListener('click', function() {
-    allowed = i;
-    underMenus.forEach (function(elem, i) {
-      if (allowed == i) {
-        if (open != true) {
-          elem.style.height = 'auto';
-          open = true;  
-        }
-        else {
-          elem.style.height = '0';
-          open = false;
-        }
-      }        
-    });
-  });
-});
+dropMenus2.forEach(function(elem, index1){
+  elem.addEventListener('click', function(event) {
+    event.stopPropagation();
+    underMenus2.forEach(function(elem, i) {
+      if(index1 == i) {
+        elem.classList.toggle('under-menu-2');
+        console.log(elem.parentNode.parentNode);
+        navArrows2.forEach(function(arow2, index) {
+          if(index == i) {
+            arow2.classList.toggle('rotate-arrow');
+            console.log('lvl 2 : ' + i);
+            console.log('lvl 2 : ' + index);
+            console.log(arow2);
 
-showUnderMenus2.forEach (function(elem, i) {
-  elem.addEventListener('click', function() {
-    allowed = i;
-    underMenus2.forEach (function(elem, i) {
-      if (allowed == i) {
-        if (open != true) {
-          elem.style.height = 'auto';
-          open = true;  
-        }
-        else {
-          elem.style.height = '0';
-          open = false;
-        }
-      }        
-    });
-  });
-});
+          }
+        })     
+      }
+    })
+  })
+})

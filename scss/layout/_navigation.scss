@@ -22,9 +22,10 @@ ul {
   font-size: map-get($font-size, logo);
   font-family: map-get($font-family, logo);
   @include medium-screen {
+    position: relative;
     justify-content: flex-end;
-    margin: 10px 30px 10px 0;
-    gap: 40px; 
+    margin: 10px 30px 10px 60px;
+    gap: 20px; 
     font-size: map-get($font-size, h2 );
   }
   &__img {
