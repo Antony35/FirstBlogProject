@@ -8,6 +8,24 @@ footer {
   text-align: center;
   justify-content: center;
   align-items: center;
+  @include small-screen {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .contact {
+      order: -2;
+    }
+    .separation-line-footer {
+      order: -1;
+      &--2 {
+        order: -3;
+      }
+    }    
+    .album {
+      order: -4;
+    }
+  }
 }
 
 .separation-line-footer {
@@ -17,6 +35,10 @@ footer {
   grid-column: 3/3;
   &--2 {
     grid-column: 7/7;
+  }
+  @include small-screen {
+    border-bottom: 1px solid map-get($colors, primary);
+    width: 80%;
   }
 }
 
@@ -52,7 +74,7 @@ footer {
   justify-content: space-around;
   @include medium-screen {
     justify-content: center;
-    gap: 5px
+    gap: 5px;
   }
   &__name {
     margin-top: 20px;
@@ -68,6 +90,9 @@ footer {
         @include medium-screen {
           max-width: 25%;
         }
+        @include small-screen {
+          min-width: 35%;
+        }
       }
     }
     &__left-arrow {
@@ -82,12 +107,18 @@ footer {
       border-width: 10px; 
       border-style: solid;
       border-color: transparent transparent map-get($colors, primary) map-get($colors, primary);
+      @include small-screen {
+        display: none;
+      }
     }
     &__right-arrow {
       cursor: pointer;
       position: absolute;
       @include medium-screen {
         top: 25px;
+        @include small-screen {
+          display: none;
+        }  
       }
       top: 55px;
       right: 10px;

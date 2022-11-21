@@ -88,6 +88,9 @@
   /* Open side menu */
   .active {
     left: 0px;
+    @include small-screen {
+      width: 100%;
+    }
   }
 
   /* Opacity page when menu open */
@@ -113,6 +116,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include small-screen {
+      top: 25px;
+      left: 35px;
+    }
     .burger-line {
       transition: all 400ms 20ms ease-in-out;
       position: relative;
@@ -121,6 +128,10 @@
       width: 30px;
       border-radius: 10rem;
       background-color: map-get($colors, primary);
+      @include small-screen {
+        height: 5px;
+        width: 45px;
+      }
       &:before, &::after {
         content: '';
         position: relative;
@@ -129,12 +140,22 @@
         width: 30px;
         border-radius: 10rem;
         background-color: map-get($colors, primary);
+        @include small-screen {
+          height: 5px;
+          width: 45px;
+        }
       }
       &:before {
         top: 10px;
+        @include small-screen {
+         top: 12px;
+        }
       }
       &::after {
         bottom: 13px;
+        @include small-screen {
+          bottom: 16px;
+        }
       }
     }
   }
@@ -149,4 +170,7 @@
 .close-burger .burger-line::after {
   transform: rotate(-270deg);
   top: -3px;
+  @include small-screen {
+    top: -6px;
+  }
 }

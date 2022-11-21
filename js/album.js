@@ -1,3 +1,5 @@
+const smallScreen = window.matchMedia("(max-width: 600px)");
+
 let albumTitle = document.querySelector('.album__name');
 let imgContainer = document.querySelector('.container__imgs');
 let link = document.querySelector('.to-album-name');
@@ -85,3 +87,40 @@ function albumImgAnnimation() {
 next.addEventListener('click', nextAlbum);
 prev.addEventListener('click', prevAlbum);
 
+
+if (smallScreen.matches) {
+
+    let footer = document.querySelector('footer');
+    let startX = 0;
+    let distance = 100;
+
+    footer.addEventListener('touchstart', function(evt) {
+        let touches = evt.changedTouches[0];
+        startX = touches.pageX;
+        between = 0;
+    });
+
+    window.addEventListener('touchmouve', function(evt) {
+        evt.preventDefault();
+        evt.stopPropagation();
+    })
+
+    footer.addEventListener('touchend', function(evt) {
+        let touches = evt.changedTouches[0];
+        let between = touches.pageX - startX;
+
+        if(between >= 0) {
+            var direction = 'leftToRight';
+        }
+        else {
+            var direction = 'rightToLeft';
+        }
+
+        if(Math.abs(between) >= distance && direction == 'leftToRight') {
+            nextAlbum();
+        }
+        if(Math.abs(between) >= distance && direction == 'rightToLeft') {
+            prevAlbum();
+        }
+    })
+}

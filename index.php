@@ -27,7 +27,7 @@
         </article>
     </section>
     <section class="comming-soon">
-        <p>COMING SOON</p>
+        <p>COMING SOON!</p>
    </section>
    </body>
     <footer>

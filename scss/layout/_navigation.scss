@@ -2,18 +2,35 @@
 .background-main {
   background: url('../Img/OriginalPaysage.jpg') no-repeat;
   background-size: cover;
-  height: 850px;
+  height: 800px;
+  @include medium-screen {
+    background-size: contain;
+    max-height: 600px;
+  }
+  @include small-screen {
+    background-size: cover;
+    min-height: 900px;
+  }
 }
 .background {
   background: radial-gradient(circle at 48.4% 30%, lighten(map-get($colors, secondary),3),lighten(map-get($colors, secondary),6),lighten(map-get($colors, secondary),9), lighten(map-get($colors, secondary),12));
 }
 
 nav {
+  @include large-screen {
   display: grid;
   grid-template-rows: repeat(3, 1fr, 0.5fr, 1fr);
   row-gap: 15px;
+  }
+  @include medium-screen {
+    display: flex;
+    justify-content: center;
+  }
+  @include small-screen {
+    display: flex;
+    justify-content: flex-end;  
+  }
 }
-
 ul {
   list-style: none;
 }
@@ -28,15 +45,23 @@ ul {
   font-family: map-get($font-family, logo);
   @include medium-screen {
     position: relative;
-    justify-content: flex-end;
     margin: 10px 30px 10px 60px;
     gap: 20px; 
-    font-size: map-get($font-size, h2 );
+    font-size: map-get($font-size, h2);
+  }
+  @include small-screen {
+    flex-direction: column;
+    margin-top: 15px;
+    font-size: map-get($font-size, h1);
+    gap: 10px;
   }
   &__img {
     height: 100px;
     @include medium-screen {
       height: 60px;
+    }
+    @include small-screen {
+      height: 110px;
     }
   }
 }
@@ -143,6 +168,9 @@ ul {
 
 //arrow to return to the top page
 .top-arrow {
+  @include small-screen {
+    display: none;
+  }
   display: flex;
   justify-content: center;
   align-items: flex-end;

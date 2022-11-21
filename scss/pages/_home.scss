@@ -5,6 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include small-screen {
+    flex-direction: column;
+  }
   img {
     max-height: 200px;
     @include main-border(map-get($colors, border));
@@ -14,6 +17,11 @@
     text-align: center;
     max-width: 66%;
     line-height: 2;
+    @include small-screen {
+      margin-top: 10px;
+      min-width: 100%;
+      font-size: 1.5rem;
+    }
     a {
       transition: 400ms ease-in-out;
       &:hover {
