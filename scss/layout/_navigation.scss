@@ -1,4 +1,9 @@
 //definine sticky menu and created a 3 rows in grid
+.background-main {
+  background: url('../Img/OriginalPaysage.jpg') no-repeat;
+  background-size: cover;
+  height: 850px;
+}
 .background {
   background: radial-gradient(circle at 48.4% 30%, lighten(map-get($colors, secondary),3),lighten(map-get($colors, secondary),6),lighten(map-get($colors, secondary),9), lighten(map-get($colors, secondary),12));
 }
@@ -46,66 +51,94 @@ ul {
     display: none;
   }
 }
+
+
 @include large-screen {
-.main-menu {
-  @include menu-style;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  &__drop-down-menu {
-    position: relative;
-    &__nav-arrow {
+  .main-menu {
+    @include menu-style;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    .nav-arrow {
       display: inline-block;
+      position: relative;
+      margin-bottom: 2.5px;
+      margin-left: 10px;
+      @include nav-arrow;
+      transition: all 300ms ease-in-out;
+      transform: rotate(0.75turn);
+    }
+    .drop-menu:hover .nav-arrow {
+      transform: rotate(1turn);
+    }
+    .under-menu li {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      padding: 10px;
+    }
+    .under-menu {
+      background: lighten(map-get($colors, secondary),10);
+      position: relative;
+      transform: scale(0);
+      max-height: 0;
+      transform-origin: top;
+    }
+    .nav-arrow-2 {
+      display: inline-block;
+      position: absolute;
+      margin-top: 4.5px;
+      right: 10px;
+      transition: all 300ms ease-in-out;
       @include nav-arrow;
     }
-    //show under-menu when mouse on drop-down-menu
-    &:hover  ul:not(.main-menu__drop-down-menu__under-menu__2){
-      transition: all 200ms ease-out;
-      border-top: 2px solid #fff;
+    .under-menu li:hover .nav-arrow-2 {
+      transform: rotate(-0.25turn);
+    }
+    .under-menu li:hover {
+      background: lighten(map-get($colors, secondary),0);
+    }
+    .drop-menu:hover .under-menu {
       overflow: visible;
-      transform:scaleY(1); 
+      animation: show-under-menu-1 400ms ease-in-out forwards;
     }
-    &__2:hover  ul {
-      transition: all 300ms linear;
-      border-left: 2px solid #fff;
-      border-top: 2px solid #fff;
-      transform: translateY(-42.5px); 
-      height: auto;   
-    }
-    //hide under-menu and give is position 
-    &__under-menu {
-      transform-origin: top;
-      transform: scaleY(0);
+    .under-menu-2 {
       position: absolute;
-      background-color: (map-get($colors, secondary));
-      right: 0;
-      left: 0;
-      font-size: map-get($font-size, text);
-      li {
-        padding: 10px 0 10px 20px;
-      }
-      li:hover:not(.main-menu__drop-down-menu__under-menu__2) {
-        background-color: lighten(map-get($colors, secondary), 10);
-      }
-      &--preparatif {
-        right: -35px;
-      }
-      &--pictures {
-        right: -170px;
-      }
-      &__2 {
-        transform-origin: bottom;
-        height: 0;
-        overflow: hidden;
-        position: absolute;
-        left: 100%;
-        background-color: map-get($colors, secondary);
-      }
-      
+      background: lighten(map-get($colors, secondary),10);
+      left: 242.2px;
+      transform: translateY(-28.7px);
+      max-width: 0;
+      overflow: hidden;
+    }.under-menu-2--photo {
+      left: 138.9px;
+    }
+
+    .drop-menu-2:hover .under-menu-2 {
+      animation: show-under-menu-2 400ms ease-in-out forwards;
     }
   }
 }
+
+@keyframes show-under-menu-1 {
+  from {
+    transform: scale(0);
+    max-height: 0;
+  }
+  to {
+    transform: scale(1);
+    max-height: 50rem;
+  }
 }
+@keyframes show-under-menu-2 {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 50rem;
+  }
+}
+
+//arrow to return to the top page
 .top-arrow {
   display: flex;
   justify-content: center;
@@ -113,7 +146,7 @@ ul {
   height: 50px;
   width: 50px;
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   right: 10px;
   position: fixed;
   .first-part {

@@ -9,12 +9,13 @@
     <script src="./js/menu-burger.js" async></script>
     <title>Page d'accueil</title>
 </head>
-<body class="close-nav">
+<body>
     <header>
-        <?php include_once('./header.php'); ?>     
+    <div class="background-main">
+            <?php include_once('./header.php'); ?>     
+        </div>
+        <div id="close-nav"></div>
     </header>
-    <div id="close-nav">
-    <div class="home-img"></div>
     <section class="about-us">
         <img src="./Img/Us.jpg" alt="Une photo de nous Antony et Apolline le sourire aux lèvre">
         <article class="about-us__text">
@@ -28,7 +29,6 @@
     <section class="comming-soon">
         <p>COMING SOON</p>
    </section>
-   </div>
    </body>
     <footer>
         <?php include_once('./footer.php'); ?>

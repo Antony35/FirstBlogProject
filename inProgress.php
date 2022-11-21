@@ -10,7 +10,9 @@
     <title>En cours de création</title>
   </head>
   <header>
-    <?php include_once('./header.php'); ?>
+    <div class="background">
+      <?php include_once('./header.php'); ?>
+    </div>
   </header>
   <body>
     <div id="close-nav">
