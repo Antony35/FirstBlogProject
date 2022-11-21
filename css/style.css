@@ -114,7 +114,7 @@ ul {
   .main-menu {
     font-family: "caviar_dreamsregular";
     font-size: 1.3rem;
-    letter-spacing: 6px;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
     width: 100%;
     display: flex;
@@ -131,6 +131,9 @@ ul {
     border-width: 8px 6px 0 6px;
     transition: all 300ms ease-in-out;
     transform: rotate(0.75turn);
+  }
+  .main-menu .home {
+    display: none;
   }
   .main-menu .drop-menu:hover .nav-arrow {
     transform: rotate(1turn);
@@ -161,7 +164,7 @@ ul {
     transform: rotate(-0.25turn);
   }
   .main-menu .under-menu li:hover {
-    background: #22303f;
+    background: #22303F;
   }
   .main-menu .drop-menu:hover .under-menu {
     overflow: visible;
@@ -170,13 +173,13 @@ ul {
   .main-menu .under-menu-2 {
     position: absolute;
     background: #344960;
-    left: 242.2px;
+    left: 227.7px;
     transform: translateY(-28.7px);
     max-width: 0;
     overflow: hidden;
   }
   .main-menu .under-menu-2--photo {
-    left: 138.9px;
+    left: 131.5px;
   }
   .main-menu .drop-menu-2:hover .under-menu-2 {
     animation: show-under-menu-2 400ms ease-in-out forwards;
@@ -246,11 +249,11 @@ ul {
     border-top: 2px solid #FAF0E8;
     font-family: "caviar_dreamsregular";
     font-size: 1.3rem;
-    letter-spacing: 6px;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(circle at 48.4% 30%, #273849, #2d3f53, #32475d, #374e67);
+    background: #344960;
     width: 280px;
     height: 100%;
     overflow-y: scroll;
@@ -273,7 +276,7 @@ ul {
   .main-menu .rotate-arrow {
     transform: rotate(1turn);
   }
-  .main-menu .drop-menu:first-child {
+  .main-menu .home {
     margin-top: 80px;
   }
   .main-menu .drop-menu, .main-menu .drop-menu-2, .main-menu a {
@@ -283,26 +286,51 @@ ul {
   }
   .main-menu .drop-menu > ul, .main-menu .drop-menu-2 > ul, .main-menu a > ul {
     font-size: 1.1rem;
+    letter-spacing: 0.2rem;
   }
   .main-menu .drop-menu > ul > li > ul, .main-menu .drop-menu-2 > ul > li > ul, .main-menu a > ul > li > ul {
     font-size: 1rem;
+    letter-spacing: 0.1rem;
   }
   .main-menu .drop-menu .under-menu, .main-menu .drop-menu .under-menu-2, .main-menu .drop-menu-2 .under-menu, .main-menu .drop-menu-2 .under-menu-2, .main-menu a .under-menu, .main-menu a .under-menu-2 {
-    position: absolute;
+    margin-top: 10px;
+    transform-origin: top;
+    max-height: 0;
+    overflow: hidden;
     transform: scale(0);
-  }
-  .main-menu .drop-menu:hover, .main-menu .drop-menu-2:hover, .main-menu a:hover {
-    transition: all 250ms ease-in-out;
-    background: #374e67;
-    border-bottom: 0.5px solid #FAF0E8;
   }
   .main-menu::-webkit-scrollbar {
     display: none;
   }
+  .main-menu a:hover, .main-menu .drop-menu:hover {
+    background-color: #22303F;
+  }
+  .main-menu .drop-menu li:hover a, .main-menu .drop-menu li:hover {
+    background-color: #344960;
+  }
+  .main-menu .drop-menu-2 li:hover a {
+    background-color: #22303F;
+  }
+  @keyframes show-under-menu-1 {
+    from {
+      max-height: 0;
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1);
+      max-height: 50rem;
+    }
+  }
   /* background au click */
-  .background-li {
-    background: #344960;
+  .background-drop-menu {
+    background: #22303F;
     border-bottom: 0.5px solid #FAF0E8;
+  }
+  .background-drop-menu-2 {
+    background: #344960;
+  }
+  .show-under-menu {
+    animation: show-under-menu-1 1s ease-in-out forwards;
   }
   /* Open side menu */
   .active {

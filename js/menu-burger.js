@@ -43,8 +43,8 @@ if (mediumScreen.matches) {
       elem.addEventListener('click', function() {
         underMenus.forEach(function(elem, i) {
           if(index1 == i) {
-            elem.parentNode.classList.toggle('background-li'); 
-            elem.classList.toggle('under-menu');
+            elem.parentNode.classList.toggle('background-drop-menu'); 
+            elem.classList.toggle('show-under-menu');
             if (index == i) {
               arow.classList.toggle('rotate-arrow');
             }
@@ -59,7 +59,8 @@ if (mediumScreen.matches) {
       event.stopPropagation();
       underMenus2.forEach(function(elem, i) {
         if(index1 == i) {
-          elem.classList.toggle('under-menu-2');
+          elem.parentNode.classList.toggle('background-drop-menu-2'); 
+          elem.classList.toggle('show-under-menu');
           navArrows2.forEach(function(arow2, index) {
             if(index == i) {
               arow2.classList.toggle('rotate-arrow');

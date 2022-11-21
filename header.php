@@ -9,6 +9,7 @@
   </a>
   <div class="separation-line-menu"></div>
     <ul class="main-menu" id="mySidenav">
+      <li class="home"><a href="index.php">Home</a></li>
       <li class="drop-menu">Préparatifs<span class="nav-arrow"></span>
         <ul class="under-menu">
           <li><a href="inProgress.php">Voyage en PVT</a></li>

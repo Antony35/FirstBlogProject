@@ -8,7 +8,7 @@
     @include menu-style;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(circle at 48.4% 30%, lighten(map-get($colors, secondary),3),lighten(map-get($colors, secondary),6),lighten(map-get($colors, secondary),9), lighten(map-get($colors, secondary),12));
+    background: lighten(map-get($colors, secondary),10);
     width: 280px;
     height: 100%;
     overflow-y: scroll;
@@ -28,7 +28,7 @@
     .rotate-arrow {
       transform: rotate(1turn);
     }
-    .drop-menu:first-child {
+    .home {
       margin-top: 80px;
     }
     .drop-menu, .drop-menu-2, a {
@@ -37,30 +37,54 @@
       padding: 15px;
       & > ul {
         font-size: 1.1rem;
+        letter-spacing: .2rem;
         & > li > ul {
           font-size: 1rem;
+          letter-spacing: .1rem;
         }
       }
       .under-menu, .under-menu-2  {
-        position: absolute;
+        margin-top: 10px;
+        transform-origin: top;
+        max-height: 0;
+        overflow: hidden;
         transform: scale(0);
-      }
-      &:hover {
-        transition: all 250ms ease-in-out;
-        background: lighten(map-get($colors, secondary),12);
-        border-bottom: 0.5px solid map-get($colors, primary);                                        
       }
     }
     &::-webkit-scrollbar {
       display: none;
-    } 
+    }
+    a:hover, .drop-menu:hover  {
+      background-color: map-get($colors, secondary);
+    }
+    .drop-menu li:hover a, .drop-menu li:hover {
+      background-color: lighten(map-get($colors , secondary),10);
+    }
+    .drop-menu-2 li:hover a {
+      background-color: map-get($colors, secondary);      
+    }
+  }
+  @keyframes show-under-menu-1 {
+    from {
+      max-height: 0;
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1);
+      max-height: 50rem;
+    }
   }
   /* background au click */
-  .background-li {
-    background: lighten(map-get($colors, secondary),10);
+  .background-drop-menu {
+    background: map-get($colors, secondary);
     border-bottom: 0.5px solid map-get($colors, primary);
   }
-
+  .background-drop-menu-2 {
+    background: lighten(map-get($colors, secondary),10);
+  }
+  .show-under-menu {
+    animation: show-under-menu-1 1s ease-in-out forwards;
+  }
   /* Open side menu */
   .active {
     left: 0px;

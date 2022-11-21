@@ -31,7 +31,7 @@
 @mixin menu-style {
   font-family: map-get($font-family, title);
   font-size: map-get($font-size, menu );  
-  letter-spacing: 6px;
+  letter-spacing: .3rem;
   text-transform: uppercase;
 }
 
