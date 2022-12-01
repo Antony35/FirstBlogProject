@@ -17,10 +17,11 @@
   align-items: center;
   margin: auto;
   height: 500px;
-  width: 500px;
+  max-width: 500px;
   border-radius: 100rem;
   background: radial-gradient(circle at 50% 50%, lighten(map-get($colors, secondary),6),lighten(map-get($colors, secondary),12),lighten(map-get($colors, secondary),24), lighten(map-get($colors, secondary),48));
   margin-bottom: 5%;
+
   p {
     letter-spacing: 0.5rem;
     font-size: 1.5rem;

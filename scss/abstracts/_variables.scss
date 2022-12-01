@@ -7,12 +7,11 @@ $colors: (
 
 /* Police size */
 $font-size: (
-  logo: 5rem,
-  h1: 3.4rem,
+  h1: 2.8rem,
   h2: 2.2rem,
   h3: 1.6rem,
   menu: 1.3rem,
-  text: 1.1rem
+  text: 1.2rem
 );
 
 /* Font-family */
@@ -24,7 +23,14 @@ $font-family: (
 
 /* Media size : breakpoint */
 $breakpoint: (
-  small-screen: 600px,
-  medium-screen: 1100px,
-  large-screen: 1101px,
+  tiny-screen       : 320px,
+  tiny-plus-screen  : 484px,
+  small-screen      : 640px,
+  small-plus-screen : 768px,
+  medium-screen     : 960px,
+  medium-plus-screen: 1024px,
+  large-screen      : 1280px,
+  large-plus-screen : 1440px,
+  extra-large-screen: 1600px,
+  ultra-large-screen: 1920px,
 );

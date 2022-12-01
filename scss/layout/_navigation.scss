@@ -1,87 +1,224 @@
-//definine sticky menu and created a 3 rows in grid
 .background-main {
-  background: url('../Img/OriginalPaysage.jpg') no-repeat;
+  background-image: url('../Img/OriginalPaysage.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  height: 800px;
-  @include medium-screen {
-    background-size: contain;
-    max-height: 600px;
-  }
-  @include small-screen {
-    background-size: cover;
-    min-height: 900px;
-  }
-}
-.background {
-  background: radial-gradient(circle at 48.4% 30%, lighten(map-get($colors, secondary),3),lighten(map-get($colors, secondary),6),lighten(map-get($colors, secondary),9), lighten(map-get($colors, secondary),12));
+  min-height: 100vh;
 }
 
-nav {
-  @include large-screen {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr, 0.5fr, 1fr);
-  row-gap: 15px;
-  }
-  @include medium-screen {
-    display: flex;
-    justify-content: center;
-  }
-  @include small-screen {
-    display: flex;
-    justify-content: flex-end;  
-  }
-}
-ul {
-  list-style: none;
+.background {
+  background-color: map-get($colors, secondary);
+  min-height: 25vh;
+  max-height: 25vh;
 }
 
 .logo {
-  margin-top: 10px;
+  display: block;
+  padding-top: 18px;
+  margin: 0 18px 0 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 2.2rem;
+  font-family: map-get($font-family, logo);
+  @include tiny-plus-screen {
+    align-items: center;    
+  }
+  @include medium-plus-screen {
+    justify-content: center;
+    font-size: 3.3rem;
+    gap: 30px;
+  }
+  img {
+    max-width: 80px;
+  }
+}
+
+//open side with same annimation to main
+.side-logo {
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  background: map-get($colors, secondary);
+  font-size: 1.3rem;
+  @include tiny-plus-screen {
+    padding: 18px 18px 18px 0;
+    gap: 10px;
+    font-size: 2.2rem;
+  }
+  img {
+    height: 60px;
+    margin: 10px;
+    @include tiny-plus-screen {
+      height: 80px;
+      margin: 0;
+    }
+  }
+}
+
+#open-btn {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 15px;
+  left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  font-size: map-get($font-size, logo);
-  font-family: map-get($font-family, logo);
-  @include medium-screen {
-    position: relative;
-    margin: 10px 30px 10px 60px;
-    gap: 20px; 
-    font-size: map-get($font-size, h2);
+  @include tiny-plus-screen {
+    top: 30px;
   }
-  @include small-screen {
-    flex-direction: column;
-    margin-top: 15px;
-    font-size: map-get($font-size, h1);
-    gap: 10px;
-  }
-  &__img {
-    height: 100px;
-    @include medium-screen {
-      height: 60px;
-    }
-    @include small-screen {
-      height: 110px;
-    }
-  }
-}
-
-//Separation line between the logo and the menu
-.separation-line-menu {
-  border-top: 1px solid;
-  width: 80%;
-  justify-self: center;
-  align-self: center;
-  @include medium-screen {
+  @include large-screen {
     display: none;
   }
+  .burger-line {
+    transition: all 400ms 20ms ease-in-out;
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 32.5px;
+    border-radius: 10rem;
+    background-color: map-get($colors, primary);
+    &:before, &::after {
+      content: '';
+      position: relative;
+      display: block;
+      height: 3.5px;
+      width: 32.5px;
+      border-radius: 10rem;
+      background-color: map-get($colors, primary);
+    }
+    &:before {
+      top: 9px;
+    }
+    &::after {
+      bottom: 13px;
+    }
+  }
 }
 
+.close-burger .burger-line {
+  transform: rotate(225deg);
+  &::before {
+    transform: scale(0);
+  }
+  &::after {
+    transform: rotate(-270deg);
+    height: 3px;
+    top: -3.5px;
+  }
+}
+//menu for small screen
+@media screen and (max-width: 1279px){  
+  .main-menu {
+    list-style-type: none;
+    transform-origin: left;
+    border-top: 2px solid map-get($colors, primary);
+    @include menu-style;
+    display: flex;
+    flex-direction: column;
+    transform: scaleX(0);
+    background: lighten(map-get($colors, secondary),10);
+    height: 100vh;
+    padding-bottom: 20vh;
+    overflow: scroll;
+    .nav-arrow, .nav-arrow-2 {
+      margin-top: 5px;
+      display: inline-block;
+      position: absolute;
+      right: 10px;
+      @include nav-arrow;
+      transition: all 300ms ease;
+      transform: rotate(0.75turn);
+    }
+    .rotate-arrow {
+      transform: rotate(1turn);
+    }
+    .drop-menu, .drop-menu-2, a {
+      cursor: pointer;
+      display: block;
+      padding: 10px;
+      & > ul {
+        font-size: 1.1rem;
+        letter-spacing: .2rem;
+        & > li > ul {
+          font-size: 1rem;
+          letter-spacing: .1rem;
+        }
+      }
+      .under-menu, .under-menu-2  {
+        margin-top: 10px;
+        max-height: 0;
+        overflow: hidden;
+        transform: scale(0);
+      }
+    }
+    &::scrollbar {
+      display: none;
+    }
+    a:hover, .drop-menu:hover  {
+      background-color: map-get($colors, secondary);
+    }
+    .drop-menu li:hover a, .drop-menu li:hover {
+      background-color: lighten(map-get($colors , secondary),10);
+    }
+    .drop-menu-2 li:hover a {
+      background-color: map-get($colors, secondary);      
+    }
+  }
+  @keyframes show-side-menu {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  @keyframes show-under-menu {
+    from {
+      max-height: 0;
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+      max-height: 50rem;
+    }
+  }
+
+  // background on click
+  .background-drop-menu {
+    background: map-get($colors, secondary);
+    border-bottom: 0.5px solid map-get($colors, primary);
+  }
+  .background-drop-menu-2 {
+    background: lighten(map-get($colors, secondary),10);
+  }
+  .show-under-menu {
+    animation: show-under-menu 400ms ease-in-out forwards;
+  }
+  // Open side menu
+  .show-side-menu {
+    animation: show-side-menu 300ms ease-in-out forwards;
+  }
+}
+// Lock page
+.lock-page {
+  overflow: hidden;
+}
 
 @include large-screen {
+  .separation-line-menu {
+    width: 96vw;
+    height: 2px;
+    background-color: map-get($colors, primary);
+    margin: 20px auto;
+  }
   .main-menu {
     @include menu-style;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
@@ -93,9 +230,6 @@ ul {
       @include nav-arrow;
       transition: all 300ms ease-in-out;
       transform: rotate(0.75turn);
-    }
-    .home {
-      display: none;
     }
     .drop-menu:hover .nav-arrow {
       transform: rotate(1turn);
@@ -133,12 +267,12 @@ ul {
     .under-menu-2 {
       position: absolute;
       background: lighten(map-get($colors, secondary),10);
-      left: 227.7px;
-      transform: translateY(-28.7px);
+      left: 100%;
+      transform: translateY(-31px);
       max-width: 0;
       overflow: hidden;
     }.under-menu-2--photo {
-      left: 131.5px;
+      left: 100%
     }
 
     .drop-menu-2:hover .under-menu-2 {
@@ -168,9 +302,6 @@ ul {
 
 //arrow to return to the top page
 .top-arrow {
-  @include small-screen {
-    display: none;
-  }
   display: flex;
   justify-content: center;
   align-items: flex-end;

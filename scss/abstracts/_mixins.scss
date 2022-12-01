@@ -1,11 +1,11 @@
-@mixin small-screen() {
-  @media screen and (max-width : map-get($breakpoint, small-screen)) {
+@mixin tiny-plus-screen() {
+  @media screen and (min-width : map-get($breakpoint, tiny-plus-screen)) {
   @content;
   }
 }
-
-@mixin medium-screen() {
-  @media screen and (max-width : map-get($breakpoint, medium-screen)) {
+ 
+@mixin medium-plus-screen() {
+  @media screen and (min-width : map-get($breakpoint, medium-plus-screen)) {
   @content;
   }
 }
@@ -42,12 +42,23 @@
   border-width: 8px 6px 0 6px;
 }
 
+@mixin footer-arrow {
+  cursor: pointer;
+  position: relative;  
+  align-self: center;
+  border-width: 1.5vw;
+  border-style: solid;
+  border-color: transparent transparent map-get($colors, primary) map-get($colors, primary);
+  @include medium-plus-screen {
+    border-width: 1vw;
+  }
+}
+
 @mixin main-border($color) {
   border-width: 1px;
   border-style: solid;
   border-color: $color;
-  border-radius: 10px;
-  box-shadow: 2px 1px;
+  box-shadow: 2px 2px $color;
 }
 
 @mixin dot() {

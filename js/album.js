@@ -1,11 +1,10 @@
-const smallScreen = window.matchMedia("(max-width: 600px)");
 
 let albumTitle = document.querySelector('.album__name');
-let imgContainer = document.querySelector('.container__imgs');
+let imgContainer = document.querySelector('.album__container__imgs');
 let link = document.querySelector('.to-album-name');
 let link1 = document.querySelector('.to-album-img');
-let next = document.querySelector('.container__right-arrow');
-let prev = document.querySelector('.container__left-arrow');
+let next = document.querySelector('.album__container__right-arrow');
+let prev = document.querySelector('.album__container__left-arrow');
 
 let myImg = imgContainer.querySelectorAll('img');
 
@@ -14,7 +13,7 @@ function Album(albumName, albumPage, imgs, alt) {
     this.albumPage = albumPage,
     this.imgs =  imgs,
     this.alt = alt
-};
+}
 
 let albumAustralia = new Album('Australie', 'albumAu.html', ['./Img/galery/carouselle/au1.jpg', './Img/galery/carouselle/au2.jpg', './Img/galery/carouselle/au3.jpg'], ['photo album australie', 'photo album australie', 'photo album australie']);
 let albumNewZeland = new Album('Nouvelle Zelande', 'albumNZ.html', ['./Img/galery/carouselle/nz1.jpg', './Img/galery/carouselle/nz2.jpg', './Img/galery/carouselle/nz3.jpg'], ['photo album NZ', 'photo album NZ', 'photo album NZ']);
@@ -22,7 +21,6 @@ let albumVan = new Album('Van', 'album-van.html', ['./Img/galery/carouselle/van1
 
 let albums = [albumAustralia, albumNewZeland, albumVan];
 let albumPos = 0;
-let id = null;
 
 function setAlbum(album) {
 
@@ -87,9 +85,6 @@ function albumImgAnnimation() {
 next.addEventListener('click', nextAlbum);
 prev.addEventListener('click', prevAlbum);
 
-
-if (smallScreen.matches) {
-
     let footer = document.querySelector('footer');
     let startX = 0;
     let distance = 100;
@@ -97,7 +92,7 @@ if (smallScreen.matches) {
     footer.addEventListener('touchstart', function(evt) {
         let touches = evt.changedTouches[0];
         startX = touches.pageX;
-        between = 0;
+        //between = 0;
     });
 
     window.addEventListener('touchmouve', function(evt) {
@@ -113,14 +108,14 @@ if (smallScreen.matches) {
             var direction = 'leftToRight';
         }
         else {
-            var direction = 'rightToLeft';
+             direction = 'rightToLeft';
         }
 
         if(Math.abs(between) >= distance && direction == 'leftToRight') {
-            nextAlbum();
-        }
-        if(Math.abs(between) >= distance && direction == 'rightToLeft') {
             prevAlbum();
         }
+        if(Math.abs(between) >= distance && direction == 'rightToLeft') {
+            nextAlbum();
+        }
     })
-}
+

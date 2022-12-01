@@ -1,73 +1,58 @@
-//open close burger menu
-
-const mediumScreen = window.matchMedia("(max-width: 1100px)");
-
-let sidenav = document.getElementById("mySidenav");
+let page = document.querySelector("html")
+let sideMenu = document.getElementById("side-menu");
 let openBtn = document.getElementById("open-btn");
-let closeBtn = document.getElementById("close-nav");
-let menu = document.querySelector('.main-menu');
-let html = document.querySelector('html');
+let logo = document.querySelector(".logo");
 
 openBtn.onclick = openCloseNav;
-closeBtn.onclick = closeNav;
 
-// Set the width of the side navigation to 250px
 function openCloseNav() {
-  sidenav.classList.toggle("active");
-  closeBtn.classList.toggle("opacity-page");
+  page.classList.toggle("lock-page");
+  sideMenu.classList.toggle("show-side-menu");
   openBtn.classList.toggle("close-burger");
-  html.classList.toggle("lock-page");
-}
-
-// Set the width of the side navigation to 0
-function closeNav() {
-  sidenav.classList.remove("active");
-  closeBtn.classList.remove("opacity-page");
-  html.classList.remove("lock-page");
-  openBtn.classList.remove("close-burger");
-}
+    logo.classList.toggle("logo");
+    logo.classList.toggle("side-logo");
+    logo.classList.toggle("show-side-menu");
+  }
 
 //drop-menu
 
-let dropMenus = document.querySelectorAll('.drop-menu');
-let underMenus = document.querySelectorAll('.under-menu');
-let dropMenus2 = document.querySelectorAll('.drop-menu-2');
-let underMenus2 = document.querySelectorAll('.under-menu-2');
-let navArrows = document.querySelectorAll('.nav-arrow');
-let navArrows2 = document.querySelectorAll('.nav-arrow-2');
+let dropMenus = document.querySelectorAll(".drop-menu");
+let underMenus = document.querySelectorAll(".under-menu");
+let dropMenus2 = document.querySelectorAll(".drop-menu-2");
+let underMenus2 = document.querySelectorAll(".under-menu-2");
+let navArrows = document.querySelectorAll(".nav-arrow");
+let navArrows2 = document.querySelectorAll(".nav-arrow-2");
 
 
-if (mediumScreen.matches) {
-  navArrows.forEach(function(arow, index) {
-    dropMenus.forEach(function(elem, index1){
-      elem.addEventListener('click', function() {
-        underMenus.forEach(function(elem, i) {
-          if(index1 == i) {
-            elem.parentNode.classList.toggle('background-drop-menu'); 
-            elem.classList.toggle('show-under-menu');
-            if (index == i) {
-              arow.classList.toggle('rotate-arrow');
-            }
-          }   
-        })
-      })
-    })
-  })
-
-  dropMenus2.forEach(function(elem, index1){
-    elem.addEventListener('click', function(event) {
-      event.stopPropagation();
-      underMenus2.forEach(function(elem, i) {
+navArrows.forEach(function(arow, index) {
+  dropMenus.forEach(function(elem, index1){
+    elem.addEventListener("click", function() {
+      underMenus.forEach(function(elem, i) {
         if(index1 == i) {
-          elem.parentNode.classList.toggle('background-drop-menu-2'); 
-          elem.classList.toggle('show-under-menu');
-          navArrows2.forEach(function(arow2, index) {
-            if(index == i) {
-              arow2.classList.toggle('rotate-arrow');
-            }
-          })     
-        }
+          elem.parentNode.classList.toggle("background-drop-menu"); 
+          elem.classList.toggle("show-under-menu");
+          if (index == i) {
+            arow.classList.toggle("rotate-arrow");
+          }
+        }   
       })
     })
   })
-}
+})
+
+dropMenus2.forEach(function(elem, index1){
+  elem.addEventListener("click", function(event) {
+    event.stopPropagation();
+    underMenus2.forEach(function(elem, i) {
+      if(index1 == i) {
+        elem.parentNode.classList.toggle("background-drop-menu-2"); 
+        elem.classList.toggle("show-under-menu");
+        navArrows2.forEach(function(arow2, index) {
+          if(index == i) {
+            arow2.classList.toggle("rotate-arrow");
+          }
+        })     
+      }
+    })
+  })
+})

@@ -6,8 +6,10 @@
   "scripts": {
     "sass": "sass --watch ./scss/main.scss:./css/style.css",
     "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed",
-    "sassP": "sass --watch ./scss/main.scss:./css/prefixed/style.css  --style compressed"
-
+    "sassP": "sass --watch ./scss/main.scss:./css/prefixed/style.css  --style compressed",
+    "build": "webpack --watch",
+    "start": "webpack serve",
+    "lint": "eslint ./js --ext .js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,15 @@
   "bugs": {
     "url": "https://github.com/Antony35/FirstBlogProject/issues"
   },
-  "homepage": "https://github.com/Antony35/FirstBlogProject#readme"
+  "homepage": "https://github.com/Antony35/FirstBlogProject#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^8.28.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.11.1"
+  }
 }

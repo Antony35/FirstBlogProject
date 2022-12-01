@@ -1,14 +1,12 @@
 <a id="top-page"></a>
 <nav>
-  <a href="index.php">
-    <div class="logo">
-      <p class="logo__name logo__name--1">We love</p>
-      <img class="logo__img" src="./Img/logo.png" alt="logo">
-      <p class="logo__name logo__name--2">the World</p>
-    </div>
+  <a class="logo" href="index.php">
+    <p>We love</p>
+    <img src="./Img/logo.png" alt="logo">
+    <p>the World</p>
   </a>
   <div class="separation-line-menu"></div>
-    <ul class="main-menu" id="mySidenav">
+    <ul class="main-menu" id="side-menu">
       <li class="home"><a href="index.php">Home</a></li>
       <li class="drop-menu">Préparatifs<span class="nav-arrow"></span>
         <ul class="under-menu">
@@ -23,7 +21,7 @@
               <li><a href="inProgress.php">Australie</a></li>                               
               <li><a href="inProgress.php">Nouvelle-Zélande</a></li>                                 
             </ul>
-          </li>    
+          </li>
           <li class="drop-menu-2">Asie<span class="nav-arrow-2"></span>
             <ul  class="under-menu-2">
               <li><a href="inProgress.php">Vietnam</a></li>                               
@@ -69,7 +67,7 @@
       <li><a href="inProgress.php">À propos</a></li>
   </ul>
 </nav>
-<a href="#top-page">
+<a class="to-top" href="#top-page">
   <div class="top-arrow">
     <div class="first-part"></div>
     <div class="second-part"></div>
