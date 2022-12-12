@@ -31,11 +31,11 @@
             </div>
             <div class="b-3">
                 <h2>Un blog à notre image</h2>
-                <img src="./Img/Us.jpg" alt="a changer">
+                <img src="./Img/photo-us.jpeg" alt="a changer">
                 <div class="text">
                 <p>Nous avons décidé de créer de A à Z notre « bébé » blog spécialisé dans le voyage. Antony utilise ses compétences dans la programmation pour structurer le blog. Apolline se charge de créer les contenus et de choisir les plus beaux clichés, histoire de vous faire rêver encore plus ;) </p>
                 <p>Tout cela nécessite des connaissances dans différents domaines, et l’apprentissage n’est qu’à ses débuts pour chacun d’entre nous. C’est un long travail qui, on espère, vous séduira. </p>
-                <p>N’hésitez pas à visiter notre page “À propos” pour en savoir plus. </p>
+                <p>N’hésitez pas à visiter notre page <a href="aPropos.php">“À propos”</a> pour en savoir plus. </p>
                 </div>
             </div>
         </article>

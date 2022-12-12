@@ -1,0 +1,37 @@
+.reception-msg {
+  border: 2px solid map-get($colors, secondary);
+  box-shadow: 0 0 10px map-get($colors, secondary);
+  border-radius: 10px;
+  max-width: 80vw;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  p {
+    margin: 20px;
+  }
+  a {
+    display: block;
+    margin-bottom: 20px;
+  }
+  button { 
+    display: block;
+    border-radius: 10px;
+    padding: 0.2rem .5rem;
+    font-size: 1.2rem;
+    color: map-get($colors, primary);
+    font-family: map-get($font-family, text);
+    min-width: 40%;
+    margin: auto;
+    background-color: lighten(map-get($colors, secondary),20);
+    &:hover {
+      background-color: lighten(map-get($colors, secondary),30);
+      transform: scale(1.05);
+    }
+    &:active {
+      background-color: lighten(map-get($colors, secondary),20);        
+      transform: scale(1);
+    }
+  }
+}

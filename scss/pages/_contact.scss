@@ -1,0 +1,71 @@
+section {
+  color: lighten(map-get($colors, secondary),20);
+  margin: 40px 0;
+  h1 {
+    text-align: center;
+    margin: 20px;
+  }
+  p {
+    text-align: center;
+    max-width: 80vw;
+    margin: auto;
+    line-height: 1.5rem;
+    letter-spacing: .1rem;
+  }
+  form {
+    border: 1px solid map-get($colors, secondary);
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 80vw;
+    margin: 40px auto;
+    label {
+      padding-left: 1rem;
+    }
+    textarea {
+      vertical-align: top;
+      min-height: 100px;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 10px 0 20px 0;
+      border-radius: 10px;
+      padding: 0.2rem 1rem;
+
+      font-size: 1.5rem;
+      color: map-get($colors, secondary);
+      font-family: map-get($font-family, text);
+      &:focus {
+        padding: 0.2rem 1rem;
+        box-shadow: inset 0 0 5px map-get($colors, secondary);
+      }
+    }
+    #name-error, #email-error {
+      color: red;
+      position: relative;
+      bottom: 20px;
+      font-size: 0.9rem;
+      text-align: left;
+      padding-left: 1rem;
+      display: none;
+    }
+    input.submit-btn {
+      display: block;
+      padding: 0;
+      height: auto;
+      font-size: 1.2rem;
+      color: map-get($colors, primary);
+      font-family: map-get($font-family, text);
+      width: 40%;
+      margin: auto;
+      background-color: lighten(map-get($colors, secondary),20);
+      &:hover {
+        background-color: lighten(map-get($colors, secondary),30);
+        transform: scale(1.05);
+      }
+      &:active {
+        background-color: lighten(map-get($colors, secondary),20);        
+        transform: scale(1);
+      }
+    }
+  }
+}

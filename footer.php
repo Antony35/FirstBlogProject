@@ -15,7 +15,7 @@
 </div>
 <span class="separation-line-footer separation-line-footer--1"></span>
 <div class="contact">
-    <a href="inProgress.php">
+    <a href="contact.php">
         <button class="btn-contact">Contactez-nous</button>
     </a>
 </div>

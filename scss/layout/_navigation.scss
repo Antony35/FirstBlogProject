@@ -1,5 +1,5 @@
 .background-main {
-  background-image: url('../Img/OriginalPaysage.jpg');
+  background-image: url("../Img/home-page.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -7,9 +7,13 @@
 }
 
 .background {
-  background-color: map-get($colors, secondary);
-  min-height: 25vh;
-  max-height: 25vh;
+  background-color: lighten(map-get($colors, secondary),50);
+  min-height: 28vh;
+  max-height: 28vh;
+  @include medium-plus-screen {
+    min-height: 25vh;
+    max-height: 25vh;      
+  }
 }
 
 .logo {
@@ -21,6 +25,7 @@
   justify-content: flex-end;
   gap: 10px;
   font-size: 2.2rem;
+  color: lighten(map-get($colors, secondary),20);
   font-family: map-get($font-family, logo);
   @include tiny-plus-screen {
     align-items: center;    
@@ -42,7 +47,7 @@
   align-items: center;
   justify-content: flex-end;
   padding-right: 10px;
-  background: map-get($colors, secondary);
+  background: lighten(map-get($colors, secondary),20);
   font-size: 1.3rem;
   @include tiny-plus-screen {
     padding: 18px 18px 18px 0;
@@ -81,7 +86,7 @@
     height: 3px;
     width: 32.5px;
     border-radius: 10rem;
-    background-color: map-get($colors, primary);
+    background-color: lighten(map-get($colors, secondary),10);
     &:before, &::after {
       content: '';
       position: relative;
@@ -89,7 +94,7 @@
       height: 3.5px;
       width: 32.5px;
       border-radius: 10rem;
-      background-color: map-get($colors, primary);
+      background-color: lighten(map-get($colors, secondary),10);
     }
     &:before {
       top: 9px;
@@ -114,6 +119,8 @@
 //menu for small screen
 @media screen and (max-width: 1279px){  
   .main-menu {
+    position: relative;
+    z-index: 1;
     list-style-type: none;
     transform-origin: left;
     border-top: 2px solid map-get($colors, primary);
@@ -121,7 +128,7 @@
     display: flex;
     flex-direction: column;
     transform: scaleX(0);
-    background: lighten(map-get($colors, secondary),10);
+    background: lighten(map-get($colors, secondary),20);
     height: 100vh;
     padding-bottom: 20vh;
     overflow: scroll;
@@ -130,7 +137,7 @@
       display: inline-block;
       position: absolute;
       right: 10px;
-      @include nav-arrow;
+      @include nav-arrow(map-get($colors, secondary));
       transition: all 300ms ease;
       transform: rotate(0.75turn);
     }
@@ -160,10 +167,10 @@
       display: none;
     }
     a:hover, .drop-menu:hover  {
-      background-color: map-get($colors, secondary);
+      background-color: lighten(map-get($colors, secondary),30);
     }
     .drop-menu li:hover a, .drop-menu li:hover {
-      background-color: lighten(map-get($colors , secondary),10);
+      background-color: lighten(map-get($colors , secondary),40);
     }
     .drop-menu-2 li:hover a {
       background-color: map-get($colors, secondary);      
@@ -190,11 +197,11 @@
 
   // background on click
   .background-drop-menu {
-    background: map-get($colors, secondary);
+    background: lighten(map-get($colors, secondary),30);
     border-bottom: 0.5px solid map-get($colors, primary);
   }
   .background-drop-menu-2 {
-    background: lighten(map-get($colors, secondary),10);
+    background: lighten(map-get($colors, secondary),40);
   }
   .show-under-menu {
     animation: show-under-menu 400ms ease-in-out forwards;
@@ -213,21 +220,25 @@
   .separation-line-menu {
     width: 96vw;
     height: 2px;
-    background-color: map-get($colors, primary);
+    background-color: lighten(map-get($colors, secondary),20);
     margin: 20px auto;
   }
   .main-menu {
+    color: lighten(map-get($colors, secondary),20);
     @include menu-style;
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
     cursor: pointer;
+    > li > a {
+      color: lighten(map-get($colors, secondary),20);      
+    }
     .nav-arrow {
       display: inline-block;
       position: relative;
       margin-bottom: 2.5px;
       margin-left: 10px;
-      @include nav-arrow;
+      @include nav-arrow(map-get($colors, secondary));
       transition: all 300ms ease-in-out;
       transform: rotate(0.75turn);
     }
@@ -235,12 +246,13 @@
       transform: rotate(1turn);
     }
     .under-menu li {
+      color: map-get($colors, primary);
       font-size: 1rem;
       letter-spacing: 1px;
       padding: 10px;
     }
     .under-menu {
-      background: lighten(map-get($colors, secondary),10);
+      background: lighten(map-get($colors, secondary),30);
       position: relative;
       transform: scale(0);
       max-height: 0;
@@ -252,7 +264,7 @@
       margin-top: 4.5px;
       right: 10px;
       transition: all 300ms ease-in-out;
-      @include nav-arrow;
+      @include nav-arrow(map-get($colors, primary));
     }
     .under-menu li:hover .nav-arrow-2 {
       transform: rotate(-0.25turn);
@@ -266,7 +278,7 @@
     }
     .under-menu-2 {
       position: absolute;
-      background: lighten(map-get($colors, secondary),10);
+      background: lighten(map-get($colors, secondary),30);
       left: 100%;
       transform: translateY(-31px);
       max-width: 0;
@@ -279,62 +291,61 @@
       animation: show-under-menu-2 400ms ease-in-out forwards;
     }
   }
-}
+  @keyframes show-under-menu-1 {
+    from {
+      transform: scale(0);
+      max-height: 0;
+    }
+    to {
+      transform: scale(1);
+      max-height: 50rem;
+    }
+  }
+  @keyframes show-under-menu-2 {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 50rem;
+    }
+  }
 
-@keyframes show-under-menu-1 {
-  from {
-    transform: scale(0);
-    max-height: 0;
-  }
-  to {
-    transform: scale(1);
-    max-height: 50rem;
-  }
-}
-@keyframes show-under-menu-2 {
-  from {
-    max-width: 0;
-  }
-  to {
-    max-width: 50rem;
-  }
-}
-
-//arrow to return to the top page
-.top-arrow {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  bottom: 30px;
-  right: 10px;
-  position: fixed;
-  .first-part {
-    background: lighten(map-get($colors, secondary),15);
-    height: 35px;
-    width: 8px;
-    border-radius: 10rem;
-  }
-  .second-part {
+  //arrow to return to the top page
+  .top-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50px;
+    width: 50px;
     position: absolute;
-    bottom: 15px;
-    left: 15px;
-    background: lighten(map-get($colors, secondary),15);
-    height: 25px;
-    width: 8px;
-    border-radius: 10rem;
-    transform: rotate(45deg);
-  }
-  .third-part {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: lighten(map-get($colors, secondary),15);
-    height: 25px;
-    width: 8px;
-    border-radius: 10rem;
-    transform: rotate(-45deg);
+    bottom: 30px;
+    right: 10px;
+    position: fixed;
+    .first-part {
+      background: lighten(map-get($colors, secondary),15);
+      height: 35px;
+      width: 8px;
+      border-radius: 10rem;
+    }
+    .second-part {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      background: lighten(map-get($colors, secondary),15);
+      height: 25px;
+      width: 8px;
+      border-radius: 10rem;
+      transform: rotate(45deg);
+    }
+    .third-part {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: lighten(map-get($colors, secondary),15);
+      height: 25px;
+      width: 8px;
+      border-radius: 10rem;
+      transform: rotate(-45deg);
+    }
   }
 }

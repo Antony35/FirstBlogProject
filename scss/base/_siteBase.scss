@@ -9,7 +9,7 @@ html {
     list-style-type: none;
 }
 
-body, button {
+body {
     background-color: map-get($colors, primary);
     font-family: map-get($font-family, text);
     font-size: map-get($font-size, text);

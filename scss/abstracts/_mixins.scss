@@ -36,9 +36,9 @@
 }
 
 //menu small-arrown to indicated drop down menu
-@mixin nav-arrow {
+@mixin nav-arrow($border-color) {
   border-style: solid;
-  border-color: map-get($colors, primary ) transparent transparent transparent;
+  border-color: $border-color transparent transparent transparent;
   border-width: 8px 6px 0 6px;
 }
 

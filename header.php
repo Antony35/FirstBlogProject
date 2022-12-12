@@ -64,7 +64,7 @@
           </li>
         </ul>
       </li>    
-      <li><a href="inProgress.php">À propos</a></li>
+      <li><a href="aPropos.php">À propos</a></li>
   </ul>
 </nav>
 <a class="to-top" href="#top-page">
