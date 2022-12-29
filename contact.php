@@ -9,8 +9,9 @@ $_SESSION['random'] = $random;
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./dist/app.bundle.js" async></script>
   <script src="./dist/polyfill.bundle.js" async></script>
+  <script src="./dist/main.bundle.js" async></script>
+  <script src="./dist/contact.bundle.js" asyn></script>
   <title>Contact</title>
 </head>
 <body>
@@ -19,10 +20,13 @@ $_SESSION['random'] = $random;
       <?php include_once('./header.php'); ?>
     </div>
   </header>
-  <section>
-    <h1>Envie de discuter ?</h1> 
-      <p>Vous voulez nous contacter, nous poser vos questions ou simplement nous parler sur divers sujets, alors n’hésitez pas à remplir le formulaire contact dès maintenant.</p>
-      <p>Nous nous ferons un plaisir de vous répondre.</p>
+  <main>
+    <section class="contact">
+      <div>
+        <h1>Envie de discuter ?</h1> 
+        <p>Vous voulez nous contacter, nous poser vos questions ou simplement nous parler sur divers sujets, alors n’hésitez pas à remplir le formulaire contact dès maintenant.</p>
+        <p>Nous nous ferons un plaisir de vous répondre.</p>
+      </div>
       <form method="POST" action="submit_contact.php">
         <div>
           <label for="name">Votre Nom :</label>
@@ -46,19 +50,22 @@ $_SESSION['random'] = $random;
       </form>
       <script src="https://www.google.com/recaptcha/api.js?render=6LctV3EjAAAAAKo0epLM8v1kd_ZEuZgUP-whjMdf"></script>
       <script>
-    //    function onClick(e) {
-    //      e.preventDefault();
+        function onClick(e) {
+          e.preventDefault();
           grecaptcha.ready(function() {
             grecaptcha.execute('6LctV3EjAAAAAKo0epLM8v1kd_ZEuZgUP-whjMdf', {action: 'submit'}).then(function(token) {
-              document.getElementById("recaptcha-response").value = token;
+            document.getElementById("recaptcha-response").value = token;
             });
           });
-    //    }
+        }
       </script>
-      <p>À très vite,</p>
-  </section>
+      <div>
+        <p>À très vite,</p>
+      </div>
+    </section>
+  </main>
   <footer>
-    <?php include_once('./footer.php'); ?>
+  <?php include_once('./footer.php'); ?>
   </footer>
 </body>
 </html>

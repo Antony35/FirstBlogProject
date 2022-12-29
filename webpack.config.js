@@ -10,7 +10,10 @@ module.exports = {
   mode: "production",
   entry: {
     polyfill: "babel-polyfill",
-    app: ["./js/album.js", "./js/menu-burger.js", "./js/slider.js", "./js/top-arrow.js", "./js/contact.js"]
+    main: ["./js/album.js", "./js/menuBurger.js", "./js/topArrow.js"],
+    contact: ["./js/contact.js"],
+    slider: ["./js/slider.js"],
+    homemade: ["./js/homeMade"]
   },
 
   /*global __dirname*/

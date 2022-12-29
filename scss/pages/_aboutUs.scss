@@ -1,0 +1,53 @@
+.about-us {
+  > * > h1, h2 {
+    @include article-title;
+  }
+  > * > p {
+    @include article-p;
+  }
+  > * > img {
+    @include article-img;
+  }
+  > :last-child {
+    margin-bottom: 50px;
+  }
+  a {
+    color: lighten(map-get($colors, secondary),20);
+    font-weight: bold;
+  }
+  .homemade {
+    text-align: center;
+    > h2 {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      font-weight: bold;  
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 1px;
+        top: 0;
+        right: 0;
+        background: map-get($colors, secondary);
+        animation: cursor 1s infinite;
+      }
+    }
+  }
+}
+
+@keyframes cursor {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}

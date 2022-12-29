@@ -7,7 +7,6 @@ function nameValid(value) {
 let pattern = /^[a-zA-Z\- áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+$/;
 return pattern.test(value);
 }
-console.log('?>');
 function emailValid(value) {
   let pattern = /^([a-z0-9.]+)@([a-z0-9]+)\.+([a-z]{1,4})$/;
   return pattern.test(value);

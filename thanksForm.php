@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./dist/app.bundle.js" async></script>
     <script src="./dist/polyfill.bundle.js" async></script>
-  <title>Message reçu</title>
+    <script src="./dist/main.bundle.js" async></script>
+    <title>Message reçu</title>
 </head>
 <body>
   <header>

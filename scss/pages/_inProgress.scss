@@ -4,7 +4,7 @@
   justify-content: space-between;
   gap: 100px;
   text-align: center;
-  color: map-get($colors, secondary);
+  color: lighten(map-get($colors, secondary),20);
   h1 {
     margin: 5% 0;
   }
@@ -23,24 +23,28 @@
   margin-bottom: 5%;
 
   p {
+    color: map-get($colors, primary);
     letter-spacing: 0.5rem;
     font-size: 1.5rem;
+    @include small-plus-screen {
+      font-size: 2rem;
+    }
   }
   .dot {
     margin: 10px 10px;
-    display: flex;    
-  &--1 {
-    @include dot;
-    animation: first-dot 2500ms linear infinite;
-  }
-  &--2 {
-    @include dot;
-    animation: second-dot 2500ms linear infinite;
-  }
-  &--3 {
-    @include dot;
-    animation: third-dot 2500ms linear infinite;
-  }
+    display: flex;
+    &--1 {
+      @include dot;
+      animation: first-dot 2500ms linear infinite;
+    }
+    &--2 {
+      @include dot;
+      animation: second-dot 2500ms linear infinite;
+    }
+    &--3 {
+      @include dot;
+      animation: third-dot 2500ms linear infinite;
+    }
   }
 }
 

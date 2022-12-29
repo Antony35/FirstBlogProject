@@ -6,33 +6,58 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style-type: none;
 }
 
 body {
     background-color: map-get($colors, primary);
-    font-family: map-get($font-family, text);
-    font-size: map-get($font-size, text);
-    color: map-get($colors, primary);
-  }
-  
-  h1, h2, h3 {
-    font-family: map-get($font-family, title);
+    color: lighten(map-get($colors, secondary),20);
+    font-family: map-get($font-family, main);
   }
 
-  h1 {
-    font-size: map-get($font-size, h1);
-  }
-  
-  h2 {
-    font-size: map-get($font-size, h2);
-  }
-  
-  h3 {
-    font-size: map-get($font-size, h3);
-  }
+h1, h2, h3 {
+  font-style: italic;
+  text-align: center;
+}
 
-  a {
-    color: map-get($colors, primary);
-    text-decoration: none;
+h1 {
+  font-size: map-get($font-size-small-screen, h1);
+  @include small-plus-screen {
+    font-size: map-get($font-size-medium-screen, h1);
   }
+}
+
+h2 {
+  font-size: map-get($font-size-small-screen, h2);
+  @include small-plus-screen {
+    font-size: map-get($font-size-medium-screen, h2);
+  }
+}
+
+h3 {
+  font-size: map-get($font-size-small-screen, h3);
+  @include small-plus-screen {
+    font-size: map-get($font-size-medium-screen, h3);
+  }
+}
+
+h4 {
+  font-size: map-get($font-size-small-screen, h4);
+  @include small-plus-screen {
+    font-size: map-get($font-size-medium-screen, h4);
+  }
+}
+
+p, ul {
+  line-height: 1.5rem;
+  letter-spacing: 0.15rem;
+  @include small-plus-screen {
+    line-height: 2.5rem;
+    font-size: map-get($font-size-medium-screen, text);
+  }
+}
+
+a {
+  color: map-get($colors, primary);
+  text-decoration: none;
+  font-family: map-get($font-family, main);
+}

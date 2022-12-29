@@ -14,7 +14,7 @@
     </div>
 </div>
 <span class="separation-line-footer separation-line-footer--1"></span>
-<div class="contact">
+<div class="contact-btn">
     <a href="contact.php">
         <button class="btn-contact">Contactez-nous</button>
     </a>

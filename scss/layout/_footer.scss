@@ -1,9 +1,10 @@
 footer {
+  color: map-get($colors, primary);
   background-color: lighten(map-get($colors, secondary),10);
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include medium-plus-screen {
+  @include large-screen {
     flex-direction: row;
     justify-content: space-around;
   }
@@ -14,30 +15,41 @@ footer {
   flex-direction: column;
   align-items: center;
   h3 {
-    margin: 20px;
+    padding: 30px 0 15px 0;
   }
   &__name {
-    margin-bottom: 20px;
+    @include medium-plus-screen {
+      margin: 30px;
+    }
   }
   &__container {
     display: flex;
     &__imgs {
       display: flex;
       width: 80vw;
+      @include medium-plus-screen {
+        width: 60vw;
+      }
       justify-content: center;
       gap: 5px;
-      @include medium-plus-screen {
+      @include large-screen {
         width: calc(100vw / 3);
       }
       img {
         width: calc(80vw / 3);
         @include medium-plus-screen {
-          width: calc((100vw / 3) / 3)
+          margin: 5px;
+        }
+        @include large-screen {
+          width: calc((100vw / 3) / 3);
         }
       }
     }
     &__left-arrow {
       @include footer-arrow;
+      @include medium-plus-screen {
+        height: 20px;
+      }
       right: 5px;
       transform: rotate(45deg);
     }
@@ -56,7 +68,10 @@ footer {
   width: 96vw;
   height: 1.5px;
   margin: 20px;
-  @include medium-plus-screen {
+  @include small-plus-screen {
+    margin: 30px;
+  }
+  @include large-screen {
     width: 1.5px;
     height: 30vh;
     &--1 {
@@ -64,19 +79,22 @@ footer {
     }
   }
 }
-.contact {
-  @include medium-plus-screen {
+.contact-btn {
+  @include large-screen {
     order: -2;
   }
   .btn-contact {
     font-family: map-get($font-family, text);
-    font-size: map-get($font-size, text);
+    font-size: map-get($font-size-small-screen, text);
     color: map-get($colors, primary);
-    margin: 20px;
     padding: 10px;
     border-radius: 10rem;
     background: lighten(map-get($colors, secondary),20);
     transition: transform 250ms ease-in-out, background-color 100ms 150ms ease-in-out;
+    @include small-plus-screen {
+      font-size: map-get($font-size-medium-screen, text);
+      padding: 15px;
+    }
     &:hover {
       cursor: pointer;
       background: lighten(map-get($colors, secondary),50);

@@ -2,7 +2,7 @@
 <nav>
   <a class="logo" href="index.php">
     <p>We love</p>
-    <img src="./Img/logo.png" alt="logo">
+    <img src="./Img/home/logo.png" alt="logo">
     <p>the World</p>
   </a>
   <div class="separation-line-menu"></div>
@@ -19,7 +19,7 @@
           <li class="drop-menu-2">Océanie<span class="nav-arrow-2"></span>
             <ul class="under-menu-2">
               <li><a href="inProgress.php">Australie</a></li>                               
-              <li><a href="inProgress.php">Nouvelle-Zélande</a></li>                                 
+              <li><a href="newZealand.php">Nouvelle-Zélande</a></li>                                 
             </ul>
           </li>
           <li class="drop-menu-2">Asie<span class="nav-arrow-2"></span>
@@ -64,7 +64,7 @@
           </li>
         </ul>
       </li>    
-      <li><a href="aPropos.php">À propos</a></li>
+      <li><a href="aboutUs.php">À propos</a></li>
   </ul>
 </nav>
 <a class="to-top" href="#top-page">

@@ -5,20 +5,31 @@ $colors: (
   border: #62767B,
 );
 
+$space: 1.5rem;
+
 /* Police size */
-$font-size: (
-  h1: 2.8rem,
-  h2: 2.2rem,
-  h3: 1.6rem,
+$font-size-small-screen: (
+  h1: 2rem,
+  h2: 1.5rem,
+  h3: 1.3rem,
+  h4: 1.1rem,
   menu: 1.3rem,
-  text: 1.2rem
+  text: 1rem
+);
+
+$font-size-medium-screen: (
+  h1: 3rem,
+  h2: 2.5rem,
+  h3: 2.3rem,
+  h4: 2.1rem,
+  menu: 2.3rem,
+  text: 2rem
 );
 
 /* Font-family */
 $font-family: (
   logo: 'flanellaregular',
-  title: 'caviar_dreamsregular',
-  text: 'caviar_dreamsregular'
+  main: 'caviar_dreamsregular'
 );
 
 /* Media size : breakpoint */
@@ -29,7 +40,7 @@ $breakpoint: (
   small-plus-screen : 768px,
   medium-screen     : 960px,
   medium-plus-screen: 1024px,
-  large-screen      : 1280px,
+  large-screen      : 1278px,
   large-plus-screen : 1440px,
   extra-large-screen: 1600px,
   ultra-large-screen: 1920px,
