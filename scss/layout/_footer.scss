@@ -31,7 +31,7 @@ footer {
         width: 60vw;
       }
       justify-content: center;
-      gap: 5px;
+      gap: 3px;
       @include large-screen {
         width: calc(100vw / 3);
       }
@@ -50,12 +50,12 @@ footer {
       @include medium-plus-screen {
         height: 20px;
       }
-      right: 5px;
+      right: 10px;
       transform: rotate(45deg);
     }
     &__right-arrow {
       @include footer-arrow;
-      left: 5px;
+      left: 10px;
       transform: rotate(225deg);
     
     }
@@ -85,14 +85,13 @@ footer {
   }
   .btn-contact {
     font-family: map-get($font-family, text);
-    font-size: map-get($font-size-small-screen, text);
+    font-size: map-get($font-size, text);
     color: map-get($colors, primary);
     padding: 10px;
     border-radius: 10rem;
     background: lighten(map-get($colors, secondary),20);
     transition: transform 250ms ease-in-out, background-color 100ms 150ms ease-in-out;
     @include small-plus-screen {
-      font-size: map-get($font-size-medium-screen, text);
       padding: 15px;
     }
     &:hover {

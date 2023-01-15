@@ -24,16 +24,21 @@
             <div>
                 <h2>Nos inspirations</h2>
                 <img src="./Img/home/Us.jpg" alt="a changer"> 
-                <p>Les blogs voyage ont toujours fait partie de notre quotidien. Nous nous sommes inspirés des idées, pris des astuces et des conseils, et nous avons aussi retenu les erreurs à ne pas commettre pendant les séjours. Il y tant d’expériences uniques partagées sur le web…</p>
-                <p>À nous maintenant de porter notre pierre à l’édifice. </p>
-                <p>Il nous paraît évident de vous partager nos vadrouilles, nos expériences, nos découvertes et nos  diverses réflexions autour de ce qui nous fait vibrer : le voyage. Grâce à ce blog nous espérons vous faire rêver et peut-être qu’un jour ce sera votre tour de partager votre expérience, qui sait ?</p>
+                <div class="intro__bloc-txt">
+                    <p>Les blogs voyage ont toujours fait partie de notre quotidien. Nous nous sommes inspirés des idées, pris des astuces et des conseils, et nous avons aussi retenu les erreurs à ne pas commettre pendant les séjours. Il y tant d’expériences uniques partagées sur le web…</p>
+                    <p>À nous maintenant de porter notre pierre à l’édifice. </p>
+                    <p>Il nous paraît évident de vous partager nos vadrouilles, nos expériences, nos découvertes et nos  diverses réflexions autour de ce qui nous fait vibrer : le voyage. Grâce à ce blog nous espérons vous faire rêver et peut-être qu’un jour ce sera votre tour de partager votre expérience, qui sait ?</p>
+            
+                </div>
             </div>
             <div>
-                <h2>Un blog à notre image</h2>
-                <img src="./Img/home/photo-us.jpeg" alt="a changer">
-                <p>Nous avons décidé de créer de A à Z notre « bébé » blog spécialisé dans le voyage. Antony utilise ses compétences dans la programmation pour structurer le blog. Apolline se charge de créer les contenus et de choisir les plus beaux clichés, histoire de vous faire rêver encore plus ;) </p>
-                <p>Tout cela nécessite des connaissances dans différents domaines, et l’apprentissage n’est qu’à ses débuts pour chacun d’entre nous. C’est un long travail qui, on espère, vous séduira. </p>
-                <p>N’hésitez pas à visiter notre page <a href="aPropos.php">“À propos”</a> pour en savoir plus. </p>
+                <h2 class="h2--reverse">Un blog à notre image</h2>
+                <img class="img--reverse" src="./Img/home/photo-us.jpeg" alt="a changer">
+                <div class="intro__bloc-txt intro__bloc-txt--reverse">        
+                    <p>Nous avons décidé de créer de A à Z notre « bébé » blog spécialisé dans le voyage. Antony utilise ses compétences dans la programmation pour structurer le blog. Apolline se charge de créer les contenus et de choisir les plus beaux clichés, histoire de vous faire rêver encore plus ;) </p>
+                    <p>Tout cela nécessite des connaissances dans différents domaines, et l’apprentissage n’est qu’à ses débuts pour chacun d’entre nous. C’est un long travail qui, on espère, vous séduira. </p>
+                    <p>N’hésitez pas à visiter notre page <a href="aPropos.php">“À propos”</a> pour en savoir plus. </p>
+                </div>
             </div>
         </section>
         <section class="container-last-article">

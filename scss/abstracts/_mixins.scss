@@ -36,7 +36,7 @@
 //menu style
 @mixin menu-style {
   font-family: map-get($font-family, title);
-  font-size: map-get($font-size-small-screen, menu );  
+  font-size: map-get($font-size, menu );  
   letter-spacing: .3rem;
   text-transform: uppercase;
 }
@@ -56,7 +56,7 @@
   border-style: solid;
   border-color: transparent transparent map-get($colors, primary) map-get($colors, primary);
   @include medium-plus-screen {
-    border-width: 1.6vw;
+    border-width: 15px;
   }
 }
 

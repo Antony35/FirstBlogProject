@@ -20,31 +20,19 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: map-get($font-size-small-screen, h1);
-  @include small-plus-screen {
-    font-size: map-get($font-size-medium-screen, h1);
-  }
+  font-size: map-get($font-size, h1);
 }
 
 h2 {
-  font-size: map-get($font-size-small-screen, h2);
-  @include small-plus-screen {
-    font-size: map-get($font-size-medium-screen, h2);
-  }
+  font-size: map-get($font-size, h2);
 }
 
 h3 {
-  font-size: map-get($font-size-small-screen, h3);
-  @include small-plus-screen {
-    font-size: map-get($font-size-medium-screen, h3);
-  }
+  font-size: map-get($font-size, h3);
 }
 
 h4 {
-  font-size: map-get($font-size-small-screen, h4);
-  @include small-plus-screen {
-    font-size: map-get($font-size-medium-screen, h4);
-  }
+  font-size: map-get($font-size, h4);
 }
 
 p, ul {
@@ -52,7 +40,6 @@ p, ul {
   letter-spacing: 0.15rem;
   @include small-plus-screen {
     line-height: 2.5rem;
-    font-size: map-get($font-size-medium-screen, text);
   }
 }
 
