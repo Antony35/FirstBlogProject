@@ -24,7 +24,7 @@ $_SESSION['random'] = $random;
     <section class="contact">
       <div>
         <h1>Envie de discuter ?</h1> 
-        <p>Vous voulez nous contacter, nous poser vos questions ou simplement nous parler sur divers sujets, alors n’hésitez pas à remplir le formulaire contact dès maintenant.</p>
+        <p>Vous voulez nous contacter, nous poser vos questions ou simplement nous parler sur divers sujets, alors n’hésitez pas à remplir le formulaire ci-dessous.</p>
         <p>Nous nous ferons un plaisir de vous répondre.</p>
       </div>
       <form method="POST" action="submit_contact.php">

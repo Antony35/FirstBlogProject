@@ -16,8 +16,8 @@
     padding: 1.5rem;
     max-width: 80vw;
     margin: 50px auto;
-    @include small-plus-screen {
-      font-size: 2rem;
+    @include medium-plus-screen {
+      max-width: 60vw;
     }
     label {
       padding-left: 1rem;
@@ -57,9 +57,6 @@
       font-family: map-get($font-family, text);
       margin: 20px auto;
       background-color: lighten(map-get($colors, secondary),20);
-      @include small-plus-screen{
-        font-size: 1.5rem;
-      }
       &:hover {
         background-color: lighten(map-get($colors, secondary),30);
         transform: scale(1.05);
@@ -71,3 +68,4 @@
     }
   }
 }
+

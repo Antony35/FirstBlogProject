@@ -80,16 +80,10 @@
 
 @mixin article-title {
   margin: 50px 20px;
-    @include medium-plus-screen {
-      margin: 50px 50px;
-    }
 }
 
 @mixin article-p {
   margin: 20px;
-    @include medium-plus-screen {
-      margin: 50px 50px;
-    }
 }
 
 @mixin article-img {

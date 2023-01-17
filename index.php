@@ -17,7 +17,7 @@
     </header>
     <main>
         <section class="intro">
-            <div>
+            <div class="intro__block-1">
                 <h1>Qui sommes-nous ?</h1>   
                 <p>Nous sommes Apolline et Antony, deux baroudeurs amoureux du voyage et de la nature.<br> Après notre rencontre en 2021, nous nous sommes lancés dans la folle aventure de parcourir le monde ensemble.</p>
             </div>

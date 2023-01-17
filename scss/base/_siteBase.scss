@@ -21,18 +21,30 @@ h1, h2, h3 {
 
 h1 {
   font-size: map-get($font-size, h1);
+  @include large-screen {
+    font-size: map-get($font-size-large-screen, h1);    
+  }
 }
 
 h2 {
   font-size: map-get($font-size, h2);
+  @include large-screen {
+    font-size: map-get($font-size-large-screen, h2);    
+  }
 }
 
 h3 {
   font-size: map-get($font-size, h3);
+  @include large-screen {
+    font-size: map-get($font-size-large-screen, h3);    
+  }
 }
 
 h4 {
   font-size: map-get($font-size, h4);
+  @include large-screen {
+    font-size: map-get($font-size-large-screen, h4);    
+  }
 }
 
 p, ul {

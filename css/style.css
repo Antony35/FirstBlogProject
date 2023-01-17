@@ -40,17 +40,37 @@ h1, h2, h3 {
 h1 {
   font-size: 2rem;
 }
+@media screen and (min-width: 1278px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
 
 h2 {
   font-size: 1.5rem;
+}
+@media screen and (min-width: 1278px) {
+  h2 {
+    font-size: 2.5rem;
+  }
 }
 
 h3 {
   font-size: 1.3rem;
 }
+@media screen and (min-width: 1278px) {
+  h3 {
+    font-size: 2.3rem;
+  }
+}
 
 h4 {
   font-size: 1.1rem;
+}
+@media screen and (min-width: 1278px) {
+  h4 {
+    font-size: 2.1rem;
+  }
 }
 
 p, ul {
@@ -84,8 +104,8 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .background {
-    min-height: 25vh;
-    max-height: 25vh;
+    min-height: 30vh;
+    max-height: 30vh;
   }
 }
 
@@ -540,16 +560,16 @@ footer {
 }
 
 .album {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
-.album h3 {
-  padding: 30px 0 15px 0;
-}
-@media screen and (min-width: 1024px) {
-  .album__name {
-    margin: 30px;
+@media screen and (min-width: 1278px) {
+  .album {
+    margin-top: 0;
+    gap: 0;
   }
 }
 .album__container {
@@ -572,6 +592,7 @@ footer {
   }
 }
 .album__container__imgs img {
+  border: 2px solid #FAF0E8;
   width: 26.6666666667vw;
 }
 @media screen and (min-width: 1024px) {
@@ -681,18 +702,8 @@ footer {
 .intro > * > h1, .intro h2 {
   margin: 50px 20px;
 }
-@media screen and (min-width: 1024px) {
-  .intro > * > h1, .intro h2 {
-    margin: 50px 50px;
-  }
-}
 .intro > * p {
   margin: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .intro > * p {
-    margin: 50px 50px;
-  }
 }
 .intro > * > img {
   margin: 50px auto;
@@ -726,6 +737,9 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 50px;
+  }
+  .intro .intro__block-1 {
+    display: block;
   }
   .intro :last-child {
     margin-bottom: 50px;
@@ -1182,18 +1196,8 @@ footer {
 .about-us > * > h1, .about-us h2 {
   margin: 50px 20px;
 }
-@media screen and (min-width: 1024px) {
-  .about-us > * > h1, .about-us h2 {
-    margin: 50px 50px;
-  }
-}
 .about-us > * p {
   margin: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .about-us > * p {
-    margin: 50px 50px;
-  }
 }
 .about-us > * > img {
   margin: 50px auto;
@@ -1236,6 +1240,55 @@ footer {
   animation: cursor 1s infinite;
 }
 
+@media screen and (min-width: 1278px) {
+  .about-us {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+  .about-us__block-0 {
+    text-align: center;
+  }
+  .about-us__block-1 {
+    display: grid;
+    column-gap: 20px;
+  }
+  .about-us__block-1 h2 {
+    grid-column: 1/3;
+  }
+  .about-us__block-1 img {
+    grid-column: 2/3;
+    grid-row: 2/5;
+    align-self: center;
+  }
+  .about-us__block-2__img-1 {
+    min-width: 70vw;
+  }
+  .about-us__block-3 {
+    column-gap: 20px;
+    display: grid;
+  }
+  .about-us__block-3__txt-1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+  }
+  .about-us__block-3__img-1 {
+    grid-column: 2/3;
+  }
+  .about-us__block-3__txt-2 {
+    grid-column: 2/3;
+    align-self: center;
+  }
+  .about-us__block-3__img-2 {
+    grid-row: 2/3;
+  }
+  .about-us__block-3__txt-3 {
+    grid-column: 1/3;
+  }
+  .about-us div > img {
+    max-width: 35vw;
+  }
+}
 @keyframes cursor {
   0% {
     opacity: 1;
@@ -1250,19 +1303,9 @@ footer {
 .contact > * > h1, .contact h2 {
   margin: 50px 20px;
 }
-@media screen and (min-width: 1024px) {
-  .contact > * > h1, .contact h2 {
-    margin: 50px 50px;
-  }
-}
 .contact > * p {
   margin: 20px;
   text-align: center;
-}
-@media screen and (min-width: 1024px) {
-  .contact > * p {
-    margin: 50px 50px;
-  }
 }
 .contact > :last-child {
   margin-bottom: 50px;
@@ -1275,9 +1318,9 @@ footer {
   max-width: 80vw;
   margin: 50px auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .contact form {
-    font-size: 2rem;
+    max-width: 60vw;
   }
 }
 .contact form label {
@@ -1316,11 +1359,6 @@ footer {
   color: #FAF0E8;
   margin: 20px auto;
   background-color: #466281;
-}
-@media screen and (min-width: 768px) {
-  .contact form input.submit-btn {
-    font-size: 1.5rem;
-  }
 }
 .contact form input.submit-btn:hover {
   background-color: #587ca2;
@@ -1371,11 +1409,6 @@ footer {
 .guide-nz > * > h1, .guide-nz h2, .guide-nz h3 {
   margin: 50px 20px;
 }
-@media screen and (min-width: 1024px) {
-  .guide-nz > * > h1, .guide-nz h2, .guide-nz h3 {
-    margin: 50px 50px;
-  }
-}
 .guide-nz > * > h4 {
   margin-left: 20px;
 }
@@ -1386,11 +1419,6 @@ footer {
 }
 .guide-nz > * p {
   margin: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .guide-nz > * p {
-    margin: 50px 50px;
-  }
 }
 .guide-nz > * > img {
   margin: 50px auto;
@@ -1411,6 +1439,86 @@ footer {
 }
 .guide-nz > * a {
   color: #466281;
+}
+
+@media screen and (min-width: 1278px) {
+  .guide-nz {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+  .guide-nz :first-child {
+    text-align: center;
+  }
+  .guide-nz__block-1 {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .guide-nz__block-1 h2 {
+    grid-column: 1/3;
+  }
+  .guide-nz__block-1 img {
+    grid-column: 2/3;
+  }
+  .guide-nz__block-1 :nth-child(0n+3) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+  }
+  .guide-nz__block-1 p {
+    grid-column: 1/3;
+  }
+  .guide-nz__block-2 {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .guide-nz__block-2 h2 {
+    grid-column: 1/3;
+  }
+  .guide-nz__block-2 h3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .guide-nz__block-2 img {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    align-self: center;
+    max-width: 35vw;
+  }
+  .guide-nz__block-2 :nth-child(0n+4) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .guide-nz__block-2 p {
+    grid-column: 1/3;
+  }
+  .guide-nz__block-3 {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .guide-nz__block-3 h2 {
+    grid-column: 1/3;
+  }
+  .guide-nz__block-3 h4 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .guide-nz__block-3 :nth-child(0n+2) {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    max-height: 50vh;
+  }
+  .guide-nz img {
+    max-width: 45vw;
+  }
+  .guide-nz__img-statut {
+    max-height: 60vh;
+  }
+  .guide-nz__img-maorie-statut img {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

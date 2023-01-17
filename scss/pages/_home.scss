@@ -31,6 +31,9 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    .intro__block-1 {
+      display: block;
+    }
     :last-child {
       margin-bottom: 50px;
     }

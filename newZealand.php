@@ -24,7 +24,7 @@
         <p><strong>Comment bien préparer son voyage en Nouvelle-Zélande ? Quand et pourquoi partir en Nouvelle-Zélande ?</strong></p>
         <p>Que ce soit pour une courte durée ou pour plusieurs années, un voyage à l’étranger se prépare en amont. Il est toujours plus facile de sortir de sa zone de confort en ayant les bonnes informations concernant le pays d’arrivée.</p>
       </div>
-      <div>
+      <div class="guide-nz__block-1">
         <h2>Ce qu’il faut savoir avant de partir en Nouvelle-Zélande</h2>
         <img src="./Img/Complet_guide_NZ/nz-soleil.jpeg" alt="Soleil brillant sur les montagnes de Glenorchy">
         <p>La Nouvelle-Zélande est un pays « du bout du monde » pour des personnes venant d’Europe. Et pour cause, il est à 18 974 km de la France (Paris - Wellington) !</p>
@@ -35,7 +35,7 @@
         <p>La Nouvelle-Zélande a une superficie actuelle de 268 021 km2, soit deux fois moins que la France. Elle est composée de deux îles, qui, au total, font 1700 km de longueur, séparés par le détroit de Cook d’une longueur de 30 km. On peut le traverser en ferry facilement.</p>
         <p>La monnaie officielle de la Nouvelle-Zélande est le Dollar Néo-Zélandais (NZD).</p>
       </div>
-      <div>
+      <div class="guide-nz__block-2">
         <h2>Pourquoi la Nouvelle-Zélande</h2>
         <img src="./Img/Complet_guide_NZ/cook-gisborne.jpg" alt="Statue du capitaine James Cook">
         <h3>Un peu d’histoire s’impose</h3>
@@ -54,7 +54,7 @@
         <p>Cependant, le peuple Maori reste attaché à sa culture et à ses traditions.</p>
         <p>Pour mieux les comprendre, nous vous avons listé quelques pratiques culturelles que vous pourrez rencontrer lors de votre <strong>visite en Nouvelle-Zélande.</strong></p>
        </div>
-       <div>
+       <div class="guide-nz__block-3">
         <h2>La culture maorie</h2>
         <img src="./Img/Complet_guide_NZ/nz-maori-statue-guerre.jpeg" alt="Statue d'un guerrier maori">
         <h4>La langue Maori</h4>
