@@ -1,4 +1,5 @@
 <?php session_start();
+//created a random number to check if the form have been already submit
 $random = rand(1, 100);
 $_SESSION['random'] = $random;
 ?>
@@ -43,18 +44,19 @@ $_SESSION['random'] = $random;
           <textarea id="msg" name="user_message" htmlspecialchars required></textarea>
         </div>
         <div>
-          <input type="hidden" id="recaptcha-response" name="recaptcha-response">
+          <input type="hidden" id="recaptchaResponse" name="recaptcha-response">
           <input class="submit-btn" id="submit" type="submit" name="submit-btn" value="Envoyer">
           <input type="hidden" name="random" value="<?php echo($random) ?>">
         </div>
       </form>
-      <script src="https://www.google.com/recaptcha/api.js?render=6LctV3EjAAAAAKo0epLM8v1kd_ZEuZgUP-whjMdf"></script>
+      <script src="https://www.google.com/recaptcha/api.js?render=6Ld67QQkAAAAAMPOiUFelVBpvXODLACA3dRpTbCt"></script>
       <script>
         function onClick(e) {
           e.preventDefault();
           grecaptcha.ready(function() {
-            grecaptcha.execute('6LctV3EjAAAAAKo0epLM8v1kd_ZEuZgUP-whjMdf', {action: 'submit'}).then(function(token) {
-            document.getElementById("recaptcha-response").value = token;
+            grecaptcha.execute('6Ld67QQkAAAAAMPOiUFelVBpvXODLACA3dRpTbCt', {action: 'submit'}).then(function(token) {
+              console.log(token);
+              document.getElementById("recaptchaResponse").value = token;
             });
           });
         }

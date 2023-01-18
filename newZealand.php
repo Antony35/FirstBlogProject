@@ -68,8 +68,6 @@
           <li>Whanau : « Famille agrandie »</li>
           <li>Waka : canot traditionnel Maori</li>
         </ul>  
-       </div>
-       <div>
         <h4>La religion</h4>
         <p>Les Maoris ont traditionnellement une vie spirituelle tournée autour de plusieurs dieux, déesses et croyances.</p>
         <p>Ils croient que toutes choses proviennent d’un dieu ou d’une déesse. Ce qui fait qu’une âme se trouve dans chaque arbre, lacs, rivières, montagnes, etc. Cela explique notamment leur rapport très proche avec la nature.</p>
@@ -107,7 +105,7 @@
         <p>Les <span class="italic">10 Great Walks</span> regroupent les randonnées les plus célèbres. Elles emmènent  vers des joyaux de la nature, des paysages époustouflants. Cependant, elles sont aussi  victimes du tourisme de masse. Énormément prisées par les touristes, elles peuvent perdre un peu de leur charme. Nous avons largement préféré effectuer des randonnées hors des chemins touristiques, et, en général, le jeu en vaut la chandelle ! Ce sont d’ailleurs ces randonnées qui regroupent nos plus beaux souvenirs, en termes de paysages, mais aussi de qualité des sentiers, plus ou moins exploitables 😉</p>
         <img src="./Img/Complet_guide_NZ/pano-paysage-abel-tasman.jpeg" alt="Paysage Abel Tasman">
         <p>Nous avons listé <strong>les différents endroits qui auront marqué notre voyage en Nouvelle-Zélande.</strong> N’étant pas des fans de la ville, ces lieux seront principalement des lieux avec la nature prédominante ou des randonnées avec des <strong>paysages à en couper le souffle !</strong></p>
-        <p>Lire dès maintenant <strong><a href="#">nos coups cœur en Nouvelle-Zélande.</a></strong></p>
+        <p>Lire dès maintenant <strong><a href="newZealand2.php">nos coups cœur en Nouvelle-Zélande.</a></strong></p>
        </div>
     </section>
   </main>

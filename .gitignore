@@ -1,10 +1,4 @@
 node_modules
 .env
-.eslintrc.json
-.vscode
 submit_contact.php
-webpack.config.js
-package.json
-package-lock.json
-Img
 

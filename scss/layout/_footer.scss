@@ -88,6 +88,8 @@ footer {
     color: map-get($colors, primary);
     padding: 10px;
     border-radius: 10rem;
+    border-color: map-get($colors, primary);
+    border-style: solid;
     background: lighten(map-get($colors, secondary),20);
     transition: transform 250ms ease-in-out, background-color 100ms 150ms ease-in-out;
     @include small-plus-screen {

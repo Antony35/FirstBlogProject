@@ -25,13 +25,6 @@
                 <h2>Nos inspirations</h2>
                 <img src="./Img/home/Us.jpg" alt="a changer"> 
                 <div class="intro__bloc-txt">
-                    <p>Les blogs voyage ont toujours fait partie de notre quotidien. Nous nous sommes inspirés des idées, pris des astuces et des conseils, et nous avons aussi retenu les erreurs à ne pas commettre pendant les séjours. Il y tant d’expériences uniques partagées sur le web…</p>
-                    <p>À nous maintenant de porter notre pierre à l’édifice. </p>
-                    <p>Il nous paraît évident de vous partager nos vadrouilles, nos expériences, nos découvertes et nos  diverses réflexions autour de ce qui nous fait vibrer : le voyage. Grâce à ce blog nous espérons vous faire rêver et peut-être qu’un jour ce sera votre tour de partager votre expérience, qui sait ?</p>
-            
-                </div>
-            </div>
-            <div>
                 <h2 class="h2--reverse">Un blog à notre image</h2>
                 <img class="img--reverse" src="./Img/home/photo-us.jpeg" alt="a changer">
                 <div class="intro__bloc-txt intro__bloc-txt--reverse">        
