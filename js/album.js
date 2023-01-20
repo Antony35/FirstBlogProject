@@ -15,9 +15,9 @@ function Album(albumName, albumPage, imgs, alt) {
     this.alt = alt
 }
 
-let albumAustralia = new Album('Australie', 'albumAu.html', ['./Img/galery/carouselle/au1.jpg', './Img/galery/carouselle/au2.jpg', './Img/galery/carouselle/au3.jpg'], ['photo album australie', 'photo album australie', 'photo album australie']);
-let albumNewZeland = new Album('Nouvelle Zelande', 'albumNZ.html', ['./Img/galery/carouselle/nz1.jpg', './Img/galery/carouselle/nz2.jpg', './Img/galery/carouselle/nz3.jpg'], ['photo album NZ', 'photo album NZ', 'photo album NZ']);
-let albumVan = new Album('Van', 'album-van.html', ['./Img/galery/carouselle/van1.jpg', './Img/galery/carouselle/van2.jpg', './Img/galery/carouselle/van3.jpg'], ['photo album Van', 'photo album Van', 'photo album Van']);
+let albumAustralia = new Album('Australie', 'albumAu.html', ['.././Img/galery/carouselle/au1.jpg', '.././Img/galery/carouselle/au2.jpg', '.././Img/galery/carouselle/au3.jpg'], ['photo album australie', 'photo album australie', 'photo album australie']);
+let albumNewZeland = new Album('Nouvelle Zelande', 'albumNZ.html', ['.././Img/galery/carouselle/nz1.jpg', '.././Img/galery/carouselle/nz2.jpg', '.././Img/galery/carouselle/nz3.jpg'], ['photo album NZ', 'photo album NZ', 'photo album NZ']);
+let albumVan = new Album('Van', 'album-van.html', ['.././Img/galery/carouselle/van1.jpg', '.././Img/galery/carouselle/van2.jpg', '.././Img/galery/carouselle/van3.jpg'], ['photo album Van', 'photo album Van', 'photo album Van']);
 
 let albums = [albumAustralia, albumNewZeland, albumVan];
 let albumPos = 0;

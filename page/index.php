@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./dist/polyfill.bundle.js" async></script>
-    <script src="./dist/main.bundle.js" async></script>
-    <script src="./dist/slider.bundle.js" async></script>
+    <link rel="stylesheet" href=".././css/style.css">
+    <script src=".././dist/polyfill.bundle.js" async></script>
+    <script src=".././dist/main.bundle.js" async></script>
 
     <title>Page d'accueil</title>
 </head>
@@ -23,10 +22,10 @@
             </div>
             <div>
                 <h2>Nos inspirations</h2>
-                <img src="./Img/home/Us.jpg" alt="a changer"> 
+                <img src=".././Img/home/Us.jpg" alt="a changer"> 
                 <div class="intro__bloc-txt">
                 <h2 class="h2--reverse">Un blog à notre image</h2>
-                <img class="img--reverse" src="./Img/home/photo-us.jpeg" alt="a changer">
+                <img class="img--reverse" src=".././Img/home/photo-us.jpeg" alt="a changer">
                 <div class="intro__bloc-txt intro__bloc-txt--reverse">        
                     <p>Nous avons décidé de créer de A à Z notre « bébé » blog spécialisé dans le voyage. Antony utilise ses compétences dans la programmation pour structurer le blog. Apolline se charge de créer les contenus et de choisir les plus beaux clichés, histoire de vous faire rêver encore plus ;) </p>
                     <p>Tout cela nécessite des connaissances dans différents domaines, et l’apprentissage n’est qu’à ses débuts pour chacun d’entre nous. C’est un long travail qui, on espère, vous séduira. </p>

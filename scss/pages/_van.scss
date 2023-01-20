@@ -1,0 +1,48 @@
+.van {
+  > :first-child {
+    text-align: center;
+  }
+  > * > h1, h2, h3 {
+    @include article-title;
+  }
+  > * > h4 {
+    margin-left: 20px;
+    @include medium-plus-screen {
+      margin-left: 75px;
+    }
+  }
+  > * p {
+    @include article-p;
+  }
+  > * > img {
+    @include article-img;
+  }
+  > * > ul {
+    list-style-type: circle;
+    margin: 20px 20px 20px 40px;
+    > li {
+      margin: 10px 0;
+    }
+  }
+  > * a {
+    color: lighten(map-get($colors, secondary),20);
+  }
+  > :last-child {
+    margin-bottom: 50px;
+  }
+}
+
+@include large-screen {
+  .van {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+}
+
+table {
+  border: 1px solid map-get($colors, secondary);
+}
+
+td {
+  border: 1px solid map-get($colors, secondary);
+}

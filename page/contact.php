@@ -12,7 +12,7 @@ $_SESSION['random'] = $random;
   <link rel="stylesheet" href="./css/style.css">
   <script src="./dist/polyfill.bundle.js" async></script>
   <script src="./dist/main.bundle.js" async></script>
-  <script src="./dist/contact.bundle.js" asyn></script>
+  <script src="./dist/contact.bundle.js" async></script>
   <title>Contact</title>
 </head>
 <body>
@@ -49,13 +49,12 @@ $_SESSION['random'] = $random;
           <input type="hidden" name="random" value="<?php echo($random) ?>">
         </div>
       </form>
-      <script src="https://www.google.com/recaptcha/api.js?render=6Ld67QQkAAAAAMPOiUFelVBpvXODLACA3dRpTbCt"></script>
+      <script src="https://www.google.com/recaptcha/api.js?render=6LcXXwokAAAAAL2zJNKzOT9kDjUjkHXaw-K1etLf"></script>
       <script>
         function onClick(e) {
           e.preventDefault();
           grecaptcha.ready(function() {
-            grecaptcha.execute('6Ld67QQkAAAAAMPOiUFelVBpvXODLACA3dRpTbCt', {action: 'submit'}).then(function(token) {
-              console.log(token);
+            grecaptcha.execute('6LcXXwokAAAAAL2zJNKzOT9kDjUjkHXaw-K1etLf', {action: 'submit'}).then(function(token) {
               document.getElementById("recaptchaResponse").value = token;
             });
           });

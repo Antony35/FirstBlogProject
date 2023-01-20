@@ -257,6 +257,7 @@ a {
 
 @media screen and (max-width: 1278px) {
   .main-menu {
+    position: relative;
     z-index: 1;
     transform-origin: left;
     border-top: 2px solid #FAF0E8;
@@ -1528,6 +1529,107 @@ footer {
   .guide-nz img {
     max-width: 45vw;
   }
+}
+.step-nz > :first-child {
+  text-align: center;
+}
+.step-nz > * > h1, .step-nz h2, .step-nz h3 {
+  margin: 50px 20px;
+}
+.step-nz > * > h4 {
+  margin-left: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .step-nz > * > h4 {
+    margin-left: 75px;
+  }
+}
+.step-nz > * p {
+  margin: 20px;
+}
+.step-nz > * > img {
+  margin: 50px auto;
+  display: block;
+  max-width: 100vw;
+}
+@media screen and (min-width: 1024px) {
+  .step-nz > * > img {
+    max-width: 75vw;
+  }
+}
+.step-nz > * > ul {
+  list-style-type: circle;
+  margin: 20px 20px 20px 40px;
+}
+.step-nz > * > ul > li {
+  margin: 10px 0;
+}
+.step-nz > * a {
+  color: #466281;
+}
+.step-nz > :last-child {
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1278px) {
+  .step-nz {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+}
+.van > :first-child {
+  text-align: center;
+}
+.van > * > h1, .van h2, .van h3 {
+  margin: 50px 20px;
+}
+.van > * > h4 {
+  margin-left: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .van > * > h4 {
+    margin-left: 75px;
+  }
+}
+.van > * p {
+  margin: 20px;
+}
+.van > * > img {
+  margin: 50px auto;
+  display: block;
+  max-width: 100vw;
+}
+@media screen and (min-width: 1024px) {
+  .van > * > img {
+    max-width: 75vw;
+  }
+}
+.van > * > ul {
+  list-style-type: circle;
+  margin: 20px 20px 20px 40px;
+}
+.van > * > ul > li {
+  margin: 10px 0;
+}
+.van > * a {
+  color: #466281;
+}
+.van > :last-child {
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 1278px) {
+  .van {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+}
+table {
+  border: 1px solid #22303F;
+}
+
+td {
+  border: 1px solid #22303F;
 }
 
 /*# sourceMappingURL=style.css.map */

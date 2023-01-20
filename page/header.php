@@ -2,7 +2,7 @@
 <nav>
   <a class="logo" href="index.php">
     <p>We love</p>
-    <img src="./Img/home/logo.png" alt="logo">
+    <img src=".././Img/home/logo.png" alt="logo">
     <p>the World</p>
   </a>
   <div class="separation-line-menu"></div>
@@ -38,7 +38,7 @@
           </li>
         </ul>
       </li>   
-      <li><a href="inProgress.php">Vanlife</a></li>
+      <li><a href="van.php">Vanlife</a></li>
       <li><a href="inProgress.php">Bon plans</a></li>                
       <li class="drop-menu">Photos<span class="nav-arrow"></span>
         <ul class="under-menu ">

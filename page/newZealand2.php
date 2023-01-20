@@ -17,7 +17,7 @@
     </div>
   </header>
   <main>
-    <section>
+    <section class="step-nz">
       <div>
         <h1>Visiter la Nouvelle-Zélande : 17 endroits à ne pas manquer !</h1>
         <p>La <strong>Nouvelle-Zélande regorge d’endroits magnifiques à visiter.</strong> Il est difficile de n’en choisir que quelques-uns. Nous avons fait le choix de sélectionner uniquement les lieux à ne pas manquer lors de votre <strong>voyage en Nouvelle-Zélande.</strong></p>

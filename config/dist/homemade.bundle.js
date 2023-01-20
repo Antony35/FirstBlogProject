@@ -1,0 +1,1 @@
+!function(){var e=document.querySelector(".homemade > h2"),n="< homemade />",t=!1;function i(t,o){o<t.length&&setTimeout((function(){e.innerHTML+=t[o],i(n,o+1)}),300)}window.addEventListener("scroll",(function(){var o=e.getBoundingClientRect().y;o>20&&o<this.screen.height-20&&0==t&&(setTimeout((function(){i(n,0)}),500),t=!0)}))}();

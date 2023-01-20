@@ -142,6 +142,7 @@
 //menu for small screen
 @media screen and (max-width: 1278px ) {
 .main-menu {
+    position: relative;
     z-index: 1;
     transform-origin: left;
     border-top: 2px solid map-get($colors, primary);

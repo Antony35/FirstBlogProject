@@ -5,9 +5,9 @@
         <div class="album__container__left-arrow"></div>
         <a class="to-album-img" href="albumAu.html">
             <div class="album__container__imgs">
-                <img  src="./Img/galery/carouselle/au1.jpg" alt="photo album australie">
-                <img  src="./Img/galery/carouselle/au2.jpg" alt="photo album australie">
-                <img  src="./Img/galery/carouselle/au3.jpg" alt="photo album australie">
+                <img  src=".././Img/galery/carouselle/au1.jpg" alt="photo album australie">
+                <img  src=".././Img/galery/carouselle/au2.jpg" alt="photo album australie">
+                <img  src=".././Img/galery/carouselle/au3.jpg" alt="photo album australie">
             </div>
         </a>
         <div class="album__container__right-arrow"></div>

@@ -10,10 +10,10 @@ module.exports = {
   mode: "production",
   entry: {
     polyfill: "babel-polyfill",
-    main: ["./js/album.js", "./js/menuBurger.js", "./js/topArrow.js"],
-    contact: ["./js/contact.js"],
-    slider: ["./js/slider.js"],
-    homemade: ["./js/homeMade"]
+    main: [".././js/album.js", ".././js/menuBurger.js", ".././js/topArrow.js"],
+    contact: [".././js/contact.js"],
+    slider: [".././js/slider.js"],
+    homemade: [".././js/homeMade"]
   },
 
   /*global __dirname*/
@@ -21,7 +21,7 @@ module.exports = {
 
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, ".././dist")
   },
   module: {
     rules: [
