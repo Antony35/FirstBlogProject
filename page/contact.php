@@ -9,10 +9,10 @@ $_SESSION['random'] = $random;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./dist/polyfill.bundle.js" async></script>
-  <script src="./dist/main.bundle.js" async></script>
-  <script src="./dist/contact.bundle.js" async></script>
+  <link rel="stylesheet" href=".././css/style.css">
+  <script src=".././dist/polyfill.bundle.js" async></script>
+  <script src=".././dist/main.bundle.js" async></script>
+  <script src=".././dist/contact.bundle.js" async></script>
   <title>Contact</title>
 </head>
 <body>
@@ -49,17 +49,18 @@ $_SESSION['random'] = $random;
           <input type="hidden" name="random" value="<?php echo($random) ?>">
         </div>
       </form>
-      <script src="https://www.google.com/recaptcha/api.js?render=6LcXXwokAAAAAL2zJNKzOT9kDjUjkHXaw-K1etLf"></script>
+      <!-- script recaptcha en attente de réparation probleme je ne recois pas le token -->
+      <!--  <script src="https://www.google.com/recaptcha/api.js?render=6LcXXwokAAAAAL2zJNKzOT9kDjUjkHXaw-K1etLf"></script>
       <script>
         function onClick(e) {
           e.preventDefault();
           grecaptcha.ready(function() {
             grecaptcha.execute('6LcXXwokAAAAAL2zJNKzOT9kDjUjkHXaw-K1etLf', {action: 'submit'}).then(function(token) {
-              document.getElementById("recaptchaResponse").value = token;
+              document.getElementById("recaptchaResponse").value = "token";
             });
           });
         }
-      </script>
+      </script> -->
       <div>
         <p>À très vite,</p>
       </div>

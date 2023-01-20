@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Aménager son van en Australie en 9 étapes">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./dist/polyfill.bundle.js" async></script>
-  <script src="./dist/main.bundle.js" async></script>
+  <link rel="stylesheet" href=".././css/style.css">
+  <script src=".././dist/polyfill.bundle.js" async></script>
+  <script src=".././dist/main.bundle.js" async></script>
   <title>Aménager son van en Australie en 9 étapes</title>
 </head>
 <body>

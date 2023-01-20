@@ -9,6 +9,10 @@
   > :last-child {
     margin-bottom: 50px
   }
+  @include large-screen {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
   form {
     border: 1px solid map-get($colors, secondary);
     box-shadow: inset 0 0 5px map-get($colors, secondary);

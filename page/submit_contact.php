@@ -10,6 +10,66 @@ function valid_donnees($donnees){
   return $donnees;
 }
 
+
+//check if methode POST is use
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+  if ($_POST['random'] == $_SESSION['random']) {
+    $date = date('Y-m-d H:i:s');
+    //Verify the data and connect to the BDD
+    $name = valid_donnees($_POST['user_name']);
+    $email = valid_donnees($_POST['user_email']);
+    $message = valid_donnees($_POST['user_message']);
+    if (!empty($name) && strlen($name) <= 20 && preg_match("/^[a-zA-Z\- áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+$/",$name) && 
+        !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      try {
+        $db = new PDO('mysql:host=localhost;dbname=blog_voyage;charset=utf8','root','root');
+      }
+      catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+      }
+      //Insert the input from the form in the BDD
+      if (!empty($name) && !empty($email) && !empty($message)) {
+        $sqlQuery = 'INSERT INTO formulaire_de_contact(user_name, user_email, user_message) VALUES (:name, :email, :message)';
+        $insertForm = $db->prepare($sqlQuery);
+      }
+      $insertForm->execute([
+        'name'    => $name,
+        'email'   => $email,
+        'message' => $message,
+      ]);
+      //created the variable for mail
+      $to       =  "antony.huart37@gmail.com";
+      $subject  =  "Nouveau message de blog_voyage";
+      $msg      =  "Le : " . $date . "\r\n"  . "\r\n" . "De : " . $name . " " . $email . "\r\n" . "\r\n" . wordwrap($message, 70, "\r\n");
+      $headers  = "Content-Type: text/plain; charset=utf-8\r\n" .
+                  "From:" . $email . "\r\n" .
+                  "Reply-To:" . $email . "\r\n";
+      //send mail
+      (mail($to, $subject, $msg, $headers));
+      unset($_SESSION['random']);
+    }
+    header('Location: http://localhost/thanksForm.php');
+  }
+} 
+else {
+  http_response_code(405);
+  echo('Méthode non autorisée');
+}
+
+
+//validation data with recaptcha waiting for fixing bug
+/*
+session_start();
+
+//function to verfy data send by user
+function valid_donnees($donnees){
+  $donnees = trim($donnees);
+  $donnees = stripslashes($donnees);
+  $donnees = htmlspecialchars($donnees);
+  return $donnees;
+}
+
+
 //check if methode POST is use
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
   //check if recaptcha-response get a value
@@ -90,4 +150,5 @@ else {
   http_response_code(405);
   echo('Méthode non autorisée');
 }
-?>
+*/
+?> 

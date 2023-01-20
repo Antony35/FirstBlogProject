@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Les lieux incontournables de la Nouvelle-Zélande. Nos conseils et astuces pour un voyage réussi.">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./dist/polyfill.bundle.js" async></script>
-  <script src="./dist/main.bundle.js" async></script>
+  <link rel="stylesheet" href=".././css/style.css">
+  <script src=".././dist/polyfill.bundle.js" async></script>
+  <script src=".././dist/main.bundle.js" async></script>
   <title>Visiter la Nouvelle-Zélande : 17 endroits à ne pas manquer !</title>
 </head>
 <body>
