@@ -28,8 +28,10 @@
       <div class="guide-nz__block-1">
         <h2>Ce qu’il faut savoir avant de partir en Nouvelle-Zélande</h2>
         <img src=".././Img/Complet_guide_NZ/nz-soleil.jpeg" alt="Soleil brillant sur les montagnes de Glenorchy">
-        <p>La Nouvelle-Zélande est un pays « du bout du monde » pour des personnes venant d’Europe. Et pour cause, il est à 18 974 km de la France (Paris - Wellington) !</p>
-        <p>Le décalage horaire varie entre 10h et 12h avec la France, alors autant vous dire que choisir cette destination, c’est choisir d’être au plus loin de la France !</p>
+        <div>
+          <p>La Nouvelle-Zélande est un pays « du bout du monde » pour des personnes venant d’Europe. Et pour cause, il est à 18 974 km de la France (Paris - Wellington) !</p>
+          <p>Le décalage horaire varie entre 10h et 12h avec la France, alors autant vous dire que choisir cette destination, c’est choisir d’être au plus loin de la France !</p>
+        </div>
         <p><strong>La meilleure période pour partir en Nouvelle-Zélande</strong> est une question importante. Étant située dans l’hémisphère Sud, <strong>les saisons de la Nouvelle-Zélande</strong> sont inversées. Ainsi, les mois d’hiver s’étendent de Juin à Août alors que les mois d’été sont de décembre à février. Le climat de l’archipel est tempéré. On peut avoir des hivers très froids comme des étés très chauds.</p>
         <p>Cependant, nous avons l’impression qu’il fait beaucoup plus chaud que la température annoncée quand il y a du soleil. Cela est normal car il y a un trou dans la couche d’ozone. Autrement dit, les U.V. passent directement et en totalité, il n’y a aucune protection normalement apportée par la couche d’ozone. Il est donc extrêmement important de <strong>bien se protéger avant une exposition au soleil.</strong></p>
         <p>>> Petit tips : Si vous voulez <strong>partir à la bonne période</strong> et être au <strong>bon endroit en Nouvelle-Zélande</strong> en fonction de la météo, alors il vaut mieux passer l’hiver dans l'île du Nord, il fera plus chaud. Et inversement, passer l’été dans l'île du Sud, il fera plus frais.</p>

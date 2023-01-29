@@ -18,10 +18,10 @@
   </header>
   <main>
     <section class="step-nz">
-      <div class="sommaire">
+      <div class="summary">
         <h2>Sommaire</h2>
-        <a href="#north-island"><p>Île du Nord de la Nouvelle-Zélande : 8 lieux incontournables à visiter<p></a>
-        <ol>
+        <a class="summary__title" href="#north-island"><p>Île du Nord de la Nouvelle-Zélande : 8 lieux incontournables à visiter<p></a>
+        <ol class="summary__list">
           <a href="#northland"><li>Northland</li></a>
           <a href="#coromandel"><li>Coromandel</li></a>
           <a href="#bay-of-plenty"><li>Bay of Plenty</li></a>
@@ -31,8 +31,9 @@
           <a href="#taupo-tongariro"><li>Taupo et Tongariro</li></a>
           <a href="#wellington"><li>Wellington</li></a>
         </ol>
-        <a href="#south-island"><p>Île du Sud de la Nouvelle-Zélande : 9 lieux incroyables à visiter<p></a>
-        <ol>
+        <img src="https://picsum.photos/id/684/600/400" alt="">
+        <a class="summary__title" href="#south-island"><p>Île du Sud de la Nouvelle-Zélande : 9 lieux incroyables à visiter<p></a>
+        <ol class="summary__list">
           <a href="#marlborough-sounds"><li>Marlborough Sounds</li></a>
           <a href="#golden-bay"><li>Golden Bay</li></a>
           <a href="#east-coast-south"><li>La côte est</li></a>
@@ -43,8 +44,8 @@
           <a href="#milford-sounds"><li>Milford Sounds</li></a>
           <a href="#catlins"><li>Catlins</li></a>
         </ol>
+        <img src="https://picsum.photos/id/684/600/400" alt="">
       </div>
-      <div>
         <h1>Visiter la Nouvelle-Zélande : 17 endroits à ne pas manquer !</h1>
         <p>La <strong>Nouvelle-Zélande regorge d’endroits magnifiques à visiter.</strong> Il est difficile de n’en choisir que quelques-uns. Nous avons fait le choix de sélectionner uniquement les lieux à ne pas manquer lors de votre <strong>voyage en Nouvelle-Zélande.</strong></p>
       </div>

@@ -1,27 +1,61 @@
 .step-nz {
-  .sommaire {
-    h2 {
-      margin: 30px 0;
-      text-align: left;
+  .summary {
+    margin-top: 50px;
+    border: 1px solid black;
+    @include small-plus-screen {
+      max-width: 70%;
+      margin: 50px auto;
+    }
+    a {
+      display: block;
+      @media screen and (max-width: 1023px) {
+        :active {
+          background-color: darken(map-get($colors, primary),10);
+        }
+      }
     }
     p {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: 10px 0;
-      padding: 0;
-      line-height: 1.5rem;
-      letter-spacing: 0;
+      text-align: center;
+      margin: 30px auto;
+      max-width: 80%;
     }
-    margin: 5vh 0;
-    max-width: 50%;
-    padding: 10px 2vw;
-    border: 1px solid map-get($colors, secondary);
-    line-height: 1.5rem;
     ol {
-      margin: 0 7.5%;
+      font-weight: bold;
+      border: 1px solid black;
+      padding: 10px 0 10px 50px;
+      @include small-plus-screen {
+        max-width: 80%;
+        margin: auto;  
+      }
+      li {
+        padding: 20px 0 20px;
+      }
+    }
+    img {
+      @include small-plus-screen {
+        max-width: 80%;
+      }
     }
   }
-  > :nth-child(0n+2) {
+  h1 {
+    margin: 50px auto;
+  }
+  h2 {
+    margin: 30px 0;
+    text-align: center;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 0;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+  }
+  ol {
+    margin: 0 7.5%;
+  }
+  > :nth-child(0n+3) {
     text-align: center;
   }
   > * > h1, h2, h3 {
@@ -56,7 +90,30 @@
 
 @include medium-plus-screen {
   .step-nz {
-    max-width: 70vw;
-    margin: 0 auto;
+    max-width: 70%;
+    margin: auto;
+    .summary {
+      min-width: 100%;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 50px;  
+      a {
+        transition: all 200ms ease-in-out;
+        :hover {
+          transform: translateX(10px);
+        }
+      }     
+      h2 {
+        grid-column: 1/3;
+      }
+      &__title {
+        grid-column: 1/3;
+      }
+      &__list {
+        min-width: 90%;
+        grid-column: 1/2;
+      }
+    }
   }
 }

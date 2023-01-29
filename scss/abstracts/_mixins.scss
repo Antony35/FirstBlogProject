@@ -91,10 +91,7 @@
 @mixin article-img {
   margin: 50px auto;
     display: block;
-    max-width: 100vw;
-    @include medium-plus-screen {
-      max-width: 75vw;
-    }
+    max-width: 100%;
 }
 
 @mixin link($color: map-get($colors, secondary), $hover:lighten(map-get($colors, secondary),20)) {

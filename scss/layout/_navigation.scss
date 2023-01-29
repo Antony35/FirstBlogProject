@@ -45,6 +45,7 @@
 
 //open side with same annimation to main and logo 
 .side-logo {
+  font-family: map-get($font-family, logo);
   transform-origin: left;
   display: flex;
   align-items: center;
@@ -155,6 +156,9 @@
     height: 100vh;
     padding-bottom: 20vh;
     overflow: scroll;
+    * {
+      font-family: map-get($font-family, title);
+    }
     @include small-plus-screen {
       font-size: 2rem;
     }
@@ -256,6 +260,7 @@
     justify-content: space-evenly;
     cursor: pointer;
     * {
+      font-family: map-get($font-family, title);
       list-style-type: none;
     }
     > li > a {
