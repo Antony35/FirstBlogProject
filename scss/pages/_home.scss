@@ -1,6 +1,6 @@
 .intro {
-  background-color: map-get($colors, secondary);
-  color: #fff;
+  background-color: map-get($colors, tertiary);
+  color: map-get($colors, primary);
   > * > h1, h2 {
     @include article-title;
   }
@@ -21,12 +21,15 @@
     text-align: center;
   }
   > :last-child > :last-child {
-    margin-bottom: 0;
+    margin-bottom: 50px;
     padding-bottom: 50px;
+  }
+  > div > * a {
+    @include link((map-get($colors, primary)), darken(map-get($colors, primary),10));
   }
 }
 
-@include large-screen {
+@include medium-plus-screen {
   .intro {
     display: flex;
     flex-direction: column;
@@ -34,15 +37,15 @@
     .intro__block-1 {
       display: block;
     }
-    :last-child {
-      margin-bottom: 50px;
-    }
     > div {
       max-width: 70vw;
       margin: 0 auto;
       display: grid;
       align-items: center;
       grid-template-columns: 1fr 1fr;
+      p:first-child {
+        padding-top: 50px;
+      }
     }
     > * h2 {
       position: relative;
@@ -50,11 +53,11 @@
       grid-row: 1/2;
       grid-column: 1/2;
       margin: 0 0 0 130px;
-      background-color: map-get($colors, secondary);
+      background-color: map-get($colors, tertiary);
     }
     .h2--reverse {
       grid-column: 2/3;
-      margin: 0 130px 0 0;
+      margin: 0 130px 0 -60px;
     }
     > * img {
       z-index: 1;
@@ -85,7 +88,6 @@
 
 .container-last-article {
   h1 {
-    color: lighten(map-get($colors, secondary),15);
     margin: 50px 0 30px;
     text-transform: uppercase;
   }
@@ -107,7 +109,7 @@
       max-width: 80vw;
       margin: 20px 10vw 50px;
       flex-direction: column;
-      background-color: lighten(map-get($colors, secondary),15);
+      background-color: map-get($colors, tertiary);
       box-shadow: 1px 1px 20px darken(map-get($colors, secondary),5);
       transition: all 200ms ease-in-out;
       @include tiny-plus-screen {
@@ -159,7 +161,7 @@
       height: 20px;
       border-radius: 10rem;
       margin-bottom: 50px;
-      background-color: map-get($colors, secondary);
+      background-color: map-get($colors, tertiary);
       &:nth-child(1) {
         margin-right: 10px;
       }
@@ -170,10 +172,6 @@
   }
 }
 
-.separation-line-article {
-  height: 1.5px;
-  width: 60vw;
-  margin: auto;
-  box-shadow: 0 0 10px map-get($colors, secondary);
-  background-color: map-get($colors, secondary);
+.home-separation-line-article {
+  @include separation-line();
 }

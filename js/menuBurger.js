@@ -29,7 +29,6 @@ navArrows.forEach(function(arow, index) {
     elem.addEventListener("click", function() {
       underMenus.forEach(function(elem, i) {
         if(index1 == i) {
-          elem.parentNode.classList.toggle("background-drop-menu"); 
           elem.classList.toggle("show-under-menu");
           if (index == i) {
             arow.classList.toggle("rotate-arrow");
@@ -45,7 +44,6 @@ dropMenus2.forEach(function(elem, index1){
     event.stopPropagation();
     underMenus2.forEach(function(elem, i) {
       if(index1 == i) {
-        elem.parentNode.classList.toggle("background-drop-menu-2"); 
         elem.classList.toggle("show-under-menu");
         navArrows2.forEach(function(arow2, index) {
           if(index == i) {

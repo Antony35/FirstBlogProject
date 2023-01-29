@@ -1,5 +1,27 @@
 .step-nz {
-  > :first-child {
+  .sommaire {
+    h2 {
+      margin: 30px 0;
+      text-align: left;
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 10px 0;
+      padding: 0;
+      line-height: 1.5rem;
+      letter-spacing: 0;
+    }
+    margin: 5vh 0;
+    max-width: 50%;
+    padding: 10px 2vw;
+    border: 1px solid map-get($colors, secondary);
+    line-height: 1.5rem;
+    ol {
+      margin: 0 7.5%;
+    }
+  }
+  > :nth-child(0n+2) {
     text-align: center;
   }
   > * > h1, h2, h3 {
@@ -7,9 +29,6 @@
   }
   > * > h4 {
     margin-left: 20px;
-    @include medium-plus-screen {
-      margin-left: 75px;
-    }
   }
   > * p {
     @include article-p;
@@ -30,9 +49,12 @@
   > :last-child {
     margin-bottom: 50px;
   }
+  .italic {
+    font-style: italic;
+  }
 }
 
-@include large-screen {
+@include medium-plus-screen {
   .step-nz {
     max-width: 70vw;
     margin: 0 auto;

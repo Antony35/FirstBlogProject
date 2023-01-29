@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 * {
@@ -10,7 +10,7 @@ html {
 
 body {
     background-color: map-get($colors, primary);
-    color: lighten(map-get($colors, secondary),20);
+    color: map-get($colors, secondary);
     font-family: map-get($font-family, main);
   }
 
@@ -49,14 +49,14 @@ h4 {
 
 p, ul {
   line-height: 1.5rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.13rem;
   @include small-plus-screen {
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 }
 
 a {
-  color: map-get($colors, primary);
+  color: map-get($colors, secondary);
   text-decoration: none;
   font-family: map-get($font-family, main);
 }

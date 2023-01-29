@@ -7,9 +7,6 @@
   }
   > * > h4 {
     margin-left: 20px;
-    @include medium-plus-screen {
-      margin-left: 75px;
-    }
   }
   > * p {
     @include article-p;
@@ -32,7 +29,7 @@
   }
 }
 
-@include large-screen {
+@include medium-plus-screen {
   .van {
     max-width: 70vw;
     margin: 0 auto;

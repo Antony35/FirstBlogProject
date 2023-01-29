@@ -36,7 +36,9 @@
 //menu style
 @mixin menu-style {
   font-family: map-get($font-family, title);
-  font-size: map-get($font-size, menu );  
+  @include large-screen() {
+    font-size: map-get($font-size, menu );
+  }  
   letter-spacing: .3rem;
   text-transform: uppercase;
 }
@@ -93,4 +95,24 @@
     @include medium-plus-screen {
       max-width: 75vw;
     }
+}
+
+@mixin link($color: map-get($colors, secondary), $hover:lighten(map-get($colors, secondary),20)) {
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 3px;   
+  color: $color;
+  transition: transform 200ms ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    color: $hover;
+  }
+}
+
+@mixin separation-line {
+  height: 1.5px;
+  width: 60vw;
+  margin: auto;
+  box-shadow: 0 0 10px map-get($colors, tertiary);
+  background-color: map-get($colors, tertiary);
 }

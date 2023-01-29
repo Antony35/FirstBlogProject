@@ -1,10 +1,14 @@
 footer {
   color: map-get($colors, primary);
-  background-color: lighten(map-get($colors, secondary),10);
+  background-color: map-get($colors, tertiary);
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include large-screen {
+  * a {
+    color: map-get($colors, primary);
+  }
+  @include medium-plus-screen {
+    padding: 0 30px;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -16,7 +20,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  @include large-screen{
+  @include medium-plus-screen{
     margin-top: 0;
     gap: 0;
   }
@@ -25,30 +29,21 @@ footer {
     &__imgs {
       display: flex;
       width: 80vw;
-      @include medium-plus-screen {
-        width: 60vw;
-      }
       justify-content: center;
       gap: 3px;
-      @include large-screen {
+      @include medium-plus-screen {
         width: calc(100vw / 3);
       }
       img {
         border: 2px solid map-get($colors, primary);
         width: calc(80vw / 3);
         @include medium-plus-screen {
-          margin: 5px;
-        }
-        @include large-screen {
           width: calc((100vw / 3) / 3);
         }
       }
     }
     &__left-arrow {
       @include footer-arrow;
-      @include medium-plus-screen {
-        height: 20px;
-      }
       right: 10px;
       transform: rotate(45deg);
     }
@@ -70,7 +65,7 @@ footer {
   @include small-plus-screen {
     margin: 30px;
   }
-  @include large-screen {
+  @include medium-plus-screen {
     width: 1.5px;
     height: 30vh;
     &--1 {
@@ -79,7 +74,7 @@ footer {
   }
 }
 .contact-btn {
-  @include large-screen {
+  @include medium-plus-screen {
     order: -2;
   }
   .btn-contact {
@@ -90,14 +85,14 @@ footer {
     border-radius: 10rem;
     border-color: map-get($colors, primary);
     border-style: solid;
-    background: lighten(map-get($colors, secondary),20);
+    background: map-get($colors, tertiary);
     transition: transform 250ms ease-in-out, background-color 100ms 150ms ease-in-out;
     @include small-plus-screen {
       padding: 15px;
     }
     &:hover {
       cursor: pointer;
-      background: lighten(map-get($colors, secondary),50);
+      background: lighten(map-get($colors, tertiary),25);
       box-shadow: none;
       border-width: 2px;
       color: map-get($colors, primary);

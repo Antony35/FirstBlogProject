@@ -35,7 +35,7 @@
                 <div class="intro__bloc-txt intro__bloc-txt--reverse">        
                     <p>Nous avons décidé de créer de A à Z notre « bébé » blog spécialisé dans le voyage. Antony utilise ses compétences dans la programmation pour structurer le blog. Apolline se charge de créer les contenus et de choisir les plus beaux clichés, histoire de vous faire rêver encore plus ;) </p>
                     <p>Tout cela nécessite des connaissances dans différents domaines, et l’apprentissage n’est qu’à ses débuts pour chacun d’entre nous. C’est un long travail qui, on espère, vous séduira. </p>
-                    <p>N’hésitez pas à visiter notre page <a href="aPropos.php">“À propos”</a> pour en savoir plus. </p>
+                    <p>N’hésitez pas à visiter notre page <a href="aboutUs.php">“À propos”</a> pour en savoir plus. </p>
                 </div>
             </div>
         </section>
@@ -64,7 +64,7 @@
             <a href="#art-2"></a>
         </div>
         </section>
-        <div class="separation-line-article"></div>
+        <div class="home-separation-line-article"></div>
         <section class="container-last-article">
             <h1>bons plans</h1>
             <article class="slides">
