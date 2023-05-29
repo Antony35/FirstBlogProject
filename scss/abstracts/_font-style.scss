@@ -1,12 +1,12 @@
 //Police logo and citation
 @font-face {
     font-family: 'flanellaregular';
-    src: url('../../police/flanella/flanella-webfont.eot');
-    src: url('../../police/flanella/flanella-webfont.eot?#iefix') format('embedded-opentype'),
-        // url('../../police/flanella/flanella-webfont.woff2') format('woff2'),
-        // url('../../police/flanella/flanella-webfont.woff') format('woff'),
-        // url('../../police/flanella/flanella-webfont.ttf') format('truetype'),
-         url('../../police/flanella/flanella-webfont.svg#flanellaregular') format('svg');
+    src: url('../src/fonts/flanella/flanella-webfont.eot');
+    src: url('../src/fonts/flanella/flanella-webfont.eot?#iefix') format('embedded-opentype'),
+        // url('../src/fonts/flanella/flanella-webfont.woff2') format('woff2'),
+        // url('../src/fonts/flanella/flanella-webfont.woff') format('woff'),
+        // url('../src/fonts/flanella/flanella-webfont.ttf') format('truetype'),
+         url('../src/fonts/flanella/flanella-webfont.svg#flanellaregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,23 +14,23 @@
 //Police menu title and text
 @font-face {
     font-family: 'caviar_dreamsregular';
-    src: url('../../police/caviar_dreams/caviardreams-webfont.eot');
-    src: url('../../police/caviar_dreams/caviardreams-webfont.eot?#iefix') format('embedded-opentype'),
-        // url('../../police/caviar_dreams/caviardreams-webfont.woff2') format('woff2'),
-        // url('../../police/caviar_dreams/caviardreams-webfont.woff') format('woff'),
-        // url('../../police/caviar_dreams/caviardreams-webfont.ttf') format('truetype'),
-         url('../../police/caviar_dreams/caviardreams-webfont.svg#caviar_dreamsregular') format('svg');
+    src: url('../src/fonts/caviar_dreams/caviardreams-webfont.eot');
+    src: url('../src/fonts/caviar_dreams/caviardreams-webfont.eot?#iefix') format('embedded-opentype'),
+        // url('../src/fonts/caviar_dreams/caviardreams-webfont.woff2') format('woff2'),
+        // url('../src/fonts/caviar_dreams/caviardreams-webfont.woff') format('woff'),
+        // url('../src/fonts/caviar_dreams/caviardreams-webfont.ttf') format('truetype'),
+         url('../src/fonts/caviar_dreams/caviardreams-webfont.svg#caviar_dreamsregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'montserrat_alternateslight';
-    src: url('../../police/montserrat/montserratalternates-light-webfont.eot');
-    src: url('../../police/montserrat/montserratalternates-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../police/montserrat/montserratalternates-light-webfont.woff2') format('woff2'),
-         url('../../police/montserrat/montserratalternates-light-webfont.woff') format('woff'),
-         url('../../police/montserrat/montserratalternates-light-webfont.ttf') format('truetype');
+    src: url('../src/fonts/montserrat/montserratalternates-light-webfont.eot');
+    src: url('../src/fonts/montserrat/montserratalternates-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../src/fonts/montserrat/montserratalternates-light-webfont.woff2') format('woff2'),
+         url('../src/fonts/montserrat/montserratalternates-light-webfont.woff') format('woff'),
+         url('../src/fonts/montserrat/montserratalternates-light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 

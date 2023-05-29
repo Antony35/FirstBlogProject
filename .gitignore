@@ -1,4 +1,4 @@
 node_modules
 .env
-page/submit_contact.php
+public/submit_contact.php
 

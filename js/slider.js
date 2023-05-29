@@ -1,4 +1,4 @@
-let slides = document.querySelectorAll(".slider > a")
+let slides = document.querySelectorAll(".anchor > a")
 
 slides.forEach(anchor => {
   anchor.addEventListener("click", function(e){
