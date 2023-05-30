@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/Antony35/FirstBlogProject#readme",
   "devDependencies": {
-    "@babel/core": "^7.20.5",
+    "@babel/core": "^7.22.1",
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.0",
     "babel-polyfill": "^6.26.0",
     "eslint": "^8.28.0",
-    "webpack": "^5.75.0",
+    "webpack": "^5.84.1",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.11.1"
   },
